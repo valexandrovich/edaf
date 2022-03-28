@@ -1,0 +1,56 @@
+{
+    "mainMenu": {
+        "home": "HOME",
+        "publicProgram": "PUBLIC PROGRAM",
+        "application": "APPLY",
+        "contacts": "CONTACTS",
+        "onlineFair": "ONLINE FAIR",
+        "goToOnlineFair": "Go to online fair",
+        "physccalFair": "PHYSICAL FAIR",
+        "goToPhysccalFair": "Go to physical fair",
+        "becomeAPartner": "Become a partner",
+        "privacyPolicy": "Privacy policy"
+    },
+
+
+    "home": {
+        "head_1": "FIRST",
+        "head_2": "PAN-EUROPEAN",
+        "head_3": "DIGITAL",
+        "head_4": "ART FAIR",
+        "goToTheFairs": "Go to the fairs",
+        "organizers": "Organizers",
+        "partners": "Partners",
+        "wie1": "WHAT IS EDAF",
+        "wie2": "What is EDAF?",
+        "about_1": "European Digital Art Fair aims to present contemporary digital art synchronically. Digital art works by artists from 43 European countries will be exhibited in both spaces simultaneously — at specially designed virtual galleries created by V-Art platform and at the exhibition in M17 Contemporary Art Center. This hybrid format of simultaneous online and offline parts of EDAF represents the poly-modality of contemporary reality. Together they create an immersive all-dimensional art experience.",
+        "about_2": "European Digital Art Fair’s mission is to provide a fulfilling ecosystem for the global digital art and art market.",
+        "about_3": "For Open call are able to submit their applications: artists as well as galleries, museums, art centers, institutions and also art-dealers who represent an artist or have the right to sell their works.",
+        "about_4": "European Digital Art Fair will be supplemented with a public program, including panel discussions for institutions / museums / galleries / collector; artist and collector talks; master classes. This public program is dedicated to digital art in the structure of contemporary art and market.",
+        "part1name": "V-ART",
+        "part1about1": "V-Art is a platform for digital art assets. We combine NFT marketplace and IP rights to trade & manage digital assets with immersive exhibitions to experience & interact with art. We provide an infrastructure for: artists, galleries, dealers, curators, museums, institutions, as well as collectors, art lovers, crypto community & corporates.",
+        "instagram": "Instagram",
+        "facebook": "Facebook",
+        "part1about2": "V-Art is situated at the intersection of at least four partially overlapping but nevertheless distinct markets: NFTs, Art, Metaverse and AR/VR. Providing a full cycle of user experience with digital art results in higher retention and engagement, V-Art provides a new highly competitive offering that is more in tune with the long-run trends of the digital sphere.",
+
+        "part2name": "DSL COLLECTION",
+        "part2about1": "The dsl collection, owned by Dominic, Sylvain, Karen and Rafael Levy, consists of the most famous works of Chinese contemporary art and 200 leading artists in the field. This collection, known for its innovative practice in the use of digital technologies (including the 2012 app and two video games), has become one of the brightest lights in the digital transformation of the art world. Today, dslcollection is increasingly involved in mixed reality, bridging the gap between the mainstream art world and advanced technology equipment.",
+        "part3name": "Straight Fire",
+        "part3about1": "Straight Fire is a Web3 start-up bridging the real world with the Metaverse, through building the first NFT Social dApp and unique NFT collections. Straight Fire is building an essential part of the NFT infrastructure: the first NFT Social dApp that adds utility and provenance to your NFTs and elucidates the true value of your NFT collections. The NFT Social dApp enables creators, collectors, and NFT enthusiasts to view and manage all their NFTs in one place, share and promote their NFT Stories on social media, experience them in real life through AR, and sell NFTs on all major marketplaces.",
+        "part4name": "HARDDISKMUSEUM",
+        "part4about1": "Founded in 2015 by artist Soliman Lopez, Harddiskmuseum is a unique repository of art that answers questions arising from the new time codes of humanity, the creation of art and cultural heritage. Conceived as a tribute to digital files, which are the essence of new media, Harddiskmuseum is becoming a turning point for modern thinking. Based on a 2 terabyte hard drive, the museum seeks to draw a confusing line between the artist's figure, cultural management, the knowledge society, memory, the art system and a combination of new exhibition models, cooperative, innovative and thought-provoking.",
+        "part5name": "ELECTRIC ARTIFACTS",
+        "part5about1": "The London studio Electric Artefacts was founded in early 2020 with the mission to promote digital art and provide a platform for experimentation, education and new expressions. Electric Artefacts collaborates with both leading and young artists, and is a pioneer of the blockchain mechanism for proving ownership in the digital art market.",
+        "becomeAPartner": "Become a Partner",
+        "firstName": "First name",
+        "email": "Email",
+        "company": "Company",
+        "writeAMessage": "Write a Message",
+        "iAccept": "I accept",
+        "privacyPolicy": "Privacy Policy",
+        "send": "Send"
+    },
+    "footer": {
+
+    }
+}
