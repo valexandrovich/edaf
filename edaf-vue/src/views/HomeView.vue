@@ -66,7 +66,7 @@
             {{$t('home.head_4')}}
           </h1>
 
-          <a href="fairs.html" class="index-hero__btn btn btn--transparent">
+          <a style="visibility:hidden;" href="fairs.html" class="index-hero__btn btn btn--transparent">
             {{$t('home.goToTheFairs')}}
             <span class="btn-arrows">
               <span></span>
@@ -265,18 +265,18 @@
                 {{$t('home.part1about1')}}
               </p>
 
-              <div class="index-IWT__column-links">
+              <!-- <div class="index-IWT__column-links">
                 <a
-                  href="#"
+                  href="https://instagram.com/v.art.digital?igshid=twe6mh6mrdcz"
                   class="index-IWT__column-instagram social-link-secondary"
                   >{{$t('home.instagram')}}</a
                 >
                 <a
-                  href="#"
+                  href="https://www.facebook.com/V.Art.digital/"
                   class="index-IWT__column-facebook social-link-secondary"
                   >{{$t('home.facebook')}}</a
                 >
-              </div>
+              </div> -->
             </div>
 
             <div data-aos="fade-up" class="index-IWT__column-img-desktop">
@@ -354,12 +354,12 @@
               </p>
               <div class="index-IWT__column-links">
                 <a
-                  href="#"
+                  href="https://instagram.com/v.art.digital?igshid=twe6mh6mrdcz"
                   class="index-IWT__column-instagram social-link-secondary"
                   >{{$t('home.instagram')}}</a
                 >
                 <a
-                  href="#"
+                  href="https://www.facebook.com/V.Art.digital/"
                   class="index-IWT__column-facebook social-link-secondary"
                   >{{$t('home.facebook')}}</a
                 >
@@ -392,10 +392,10 @@
               </p>
 
               <div class="index-partners__item-links">
-                <a href="#" class="index-partners__item-instagram social-link"
+                <a href="https://www.instagram.com/dslcollection/" class="index-partners__item-instagram social-link"
                   >{{$t('home.instagram')}}</a
                 >
-                <a href="#" class="index-partners__item-facebook social-link"
+                <a href="https://www.facebook.com/Dslcollection-120844704764687" class="index-partners__item-facebook social-link"
                   >{{$t('home.facebook')}}</a
                 >
               </div>
@@ -419,12 +419,12 @@
               </p>
 
               <div class="index-partners__item-links">
-                <a href="#" class="index-partners__item-instagram social-link"
+                <a href="https://www.instagram.com/straightfirenft/ " class="index-partners__item-instagram social-link"
                   >{{$t('home.instagram')}}</a
                 >
-                <a href="#" class="index-partners__item-facebook social-link"
+                <!-- <a href="#" class="index-partners__item-facebook social-link"
                   >{{$t('home.facebook')}}</a
-                >
+                > -->
               </div>
             </div>
           </div>
@@ -446,10 +446,10 @@
               </p>
 
               <div class="index-partners__item-links">
-                <a href="#" class="index-partners__item-instagram social-link"
+                <a href="https://www.instagram.com/harddiskmuseum/" class="index-partners__item-instagram social-link"
                   >{{$t('home.instagram')}}</a
                 >
-                <a href="#" class="index-partners__item-facebook social-link"
+                <a href="https://www.facebook.com/harddiskmuseum" class="index-partners__item-facebook social-link"
                   >{{$t('home.facebook')}}</a
                 >
               </div>
@@ -475,10 +475,10 @@
               </p>
 
               <div class="index-partners__item-links">
-                <a href="#" class="index-partners__item-instagram social-link"
+                <a href="https://www.instagram.com/electricartefacts/" class="index-partners__item-instagram social-link"
                   >{{$t('home.instagram')}}</a
                 >
-                <a href="#" class="index-partners__item-facebook social-link"
+                <a href="https://www.facebook.com/electricartefacts" class="index-partners__item-facebook social-link"
                   >{{$t('home.facebook')}}</a
                 >
               </div>
