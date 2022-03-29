@@ -12,7 +12,6 @@ export const i18n = new VueI18n({
     fallbackLocale: 'en',
 })
 
-
 export function loadMessages() {
     const usedLanguage = ['uk', 'en']
     usedLanguage.forEach(lang => {

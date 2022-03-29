@@ -7,7 +7,6 @@ module.exports = defineConfig({
             '^/api': {
                 target: 'https://edaf.sbs/',
                 changeOrigin: true,
-
             }
         }
     },
