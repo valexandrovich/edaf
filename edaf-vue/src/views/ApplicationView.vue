@@ -367,113 +367,113 @@
               </ul>
               <ul class="participating-footer__list">
                 <li class="participating-footer__item">
-                  <a href="#" class="social-link"> {{$t('application.austria')}} </a>
+                  <a href="#" class="social-link"> {{$t('application.estonia')}} </a>
                 </li>
                 <li class="participating-footer__item">
-                  <a href="#" class="social-link"> {{$t('application.albania')}} </a>
+                  <a href="#" class="social-link"> {{$t('application.ireland')}} </a>
                 </li>
                 <li class="participating-footer__item">
-                  <a href="#" class="social-link"> {{$t('application.andorra')}} </a>
+                  <a href="#" class="social-link"> {{$t('application.iceland')}} </a>
                 </li>
                 <li class="participating-footer__item">
-                  <a href="#" class="social-link"> {{$t('application.belgium')}} </a>
-                </li>
-                <li class="participating-footer__item">
-                  <a href="#" class="social-link"> {{$t('application.belarus')}} </a>
-                </li>
-                <li class="participating-footer__item">
-                  <a href="#" class="social-link"> {{$t('application.bulgaria')}} </a>
+                  <a href="#" class="social-link"> {{$t('application.latvia')}} </a>
                 </li>
                 <li class="participating-footer__item">
                   <a href="#" class="social-link"> {{$t('application.lithuania')}} </a>
                 </li>
                 <li class="participating-footer__item">
-                  <a href="#" class="social-link"> {{$t('application.greece')}} </a>
+                  <a href="#" class="social-link"> {{$t('application.liechtenstein')}} </a>
                 </li>
                 <li class="participating-footer__item">
-                  <a href="#" class="social-link"> {{$t('application.denmark')}} </a>
+                  <a href="#" class="social-link"> {{$t('application.luxembourg')}} </a>
+                </li>
+                <li class="participating-footer__item">
+                  <a href="#" class="social-link"> {{$t('application.malta')}} </a>
+                </li>
+                <li class="participating-footer__item">
+                  <a href="#" class="social-link"> {{$t('application.moldova')}} </a>
                 </li>
               </ul>
               <ul class="participating-footer__list">
                 <li class="participating-footer__item">
-                  <a href="#" class="social-link"> {{$t('application.austria')}} </a>
+                  <a href="#" class="social-link"> {{$t('application.monaco')}} </a>
                 </li>
                 <li class="participating-footer__item">
-                  <a href="#" class="social-link"> {{$t('application.albania')}} </a>
+                  <a href="#" class="social-link"> {{$t('application.netherlands')}} </a>
                 </li>
                 <li class="participating-footer__item">
-                  <a href="#" class="social-link"> {{$t('application.andorra')}} </a>
+                  <a href="#" class="social-link"> {{$t('application.germany')}} </a>
                 </li>
                 <li class="participating-footer__item">
-                  <a href="#" class="social-link"> {{$t('application.belgium')}} </a>
-                </li>
-                <li class="participating-footer__item">
-                  <a href="#" class="social-link"> {{$t('application.belarus')}} </a>
-                </li>
-                <li class="participating-footer__item">
-                  <a href="#" class="social-link"> {{$t('application.bulgaria')}} </a>
+                  <a href="#" class="social-link"> {{$t('application.norway')}} </a>
                 </li>
                 <li class="participating-footer__item">
                   <a href="#" class="social-link"> {{$t('application.uk')}} </a>
                 </li>
                 <li class="participating-footer__item">
-                  <a href="#" class="social-link"> {{$t('application.greece')}} </a>
+                  <a href="#" class="social-link"> {{$t('application.northern_macedonia')}} </a>
                 </li>
                 <li class="participating-footer__item">
-                  <a href="#" class="social-link"> {{$t('application.denmark')}} </a>
+                  <a href="#" class="social-link"> {{$t('application.poland')}} </a>
+                </li>
+                <li class="participating-footer__item">
+                  <a href="#" class="social-link"> {{$t('application.portugal')}} </a>
+                </li>
+                <li class="participating-footer__item">
+                  <a href="#" class="social-link"> {{$t('application.romania')}} </a>
                 </li>
               </ul>
               <ul class="participating-footer__list">
                 <li class="participating-footer__item">
-                  <a href="#" class="social-link"> {{$t('application.austria')}} </a>
+                  <a href="#" class="social-link"> {{$t('application.san_marino')}} </a>
                 </li>
                 <li class="participating-footer__item">
-                  <a href="#" class="social-link"> {{$t('application.albania')}} </a>
+                  <a href="#" class="social-link"> {{$t('application.vatican')}} </a>
                 </li>
                 <li class="participating-footer__item">
-                  <a href="#" class="social-link"> {{$t('application.andorra')}} </a>
+                  <a href="#" class="social-link"> {{$t('application.serbia')}} </a>
                 </li>
                 <li class="participating-footer__item">
-                  <a href="#" class="social-link"> {{$t('application.belgium')}} </a>
-                </li>
-                <li class="participating-footer__item">
-                  <a href="#" class="social-link"> {{$t('application.belarus')}} </a>
-                </li>
-                <li class="participating-footer__item">
-                  <a href="#" class="social-link"> {{$t('application.bulgaria')}} </a>
+                  <a href="#" class="social-link"> {{$t('application.slovakia')}} </a>
                 </li>
                 <li class="participating-footer__item">
                   <a href="#" class="social-link"> {{$t('application.slovenia')}} </a>
                 </li>
                 <li class="participating-footer__item">
-                  <a href="#" class="social-link"> {{$t('application.greece')}} </a>
+                  <a href="#" class="social-link"> {{$t('application.hungary')}} </a>
                 </li>
                 <li class="participating-footer__item">
-                  <a href="#" class="social-link"> {{$t('application.denmark')}} </a>
+                  <a href="#" class="social-link"> {{$t('application.ukraine')}} </a>
+                </li>
+                <li class="participating-footer__item">
+                  <a href="#" class="social-link"> {{$t('application.finland')}} </a>
+                </li>
+                <li class="participating-footer__item">
+                  <a href="#" class="social-link"> {{$t('application.france')}} </a>
                 </li>
               </ul>
               <ul class="participating-footer__list">
                 <li class="participating-footer__item">
-                  <a href="#" class="social-link"> {{$t('application.austria')}} </a>
+                  <a href="#" class="social-link"> {{$t('application.croatia')}} </a>
                 </li>
                 <li class="participating-footer__item">
-                  <a href="#" class="social-link"> {{$t('application.albania')}} </a>
+                  <a href="#" class="social-link"> {{$t('application.czech_republic')}} </a>
                 </li>
                 <li class="participating-footer__item">
-                  <a href="#" class="social-link"> {{$t('application.andorra')}} </a>
+                  <a href="#" class="social-link"> {{$t('application.montenegro')}} </a>
                 </li>
                 <li class="participating-footer__item">
-                  <a href="#" class="social-link"> {{$t('application.belgium')}} </a>
-                </li>
-                <li class="participating-footer__item">
-                  <a href="#" class="social-link"> {{$t('application.belarus')}} </a>
-                </li>
-                <li class="participating-footer__item">
-                  <a href="#" class="social-link"> {{$t('application.bulgaria')}} </a>
+                  <a href="#" class="social-link"> {{$t('application.switzerland')}} </a>
                 </li>
                 <li class="participating-footer__item">
                   <a href="#" class="social-link"> {{$t('application.sweden')}} </a>
                 </li>
+                <!-- <li class="participating-footer__item">
+                  <a href="#" class="social-link"> {{$t('application.bulgaria')}} </a>
+                </li>
+                <li class="participating-footer__item">
+                  <a href="#" class="social-link"> {{$t('application.sweden')}} </a>
+                </li> -->
               </ul>
             </div>
           </div>
