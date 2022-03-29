@@ -4,8 +4,7 @@
   "info": {
     "singularName": "vocabulary",
     "pluralName": "vocabularies",
-    "displayName": "Vocabulary",
-    "description": ""
+    "displayName": "Vocabulary"
   },
   "options": {
     "draftAndPublish": true

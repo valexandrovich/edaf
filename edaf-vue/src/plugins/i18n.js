@@ -18,7 +18,7 @@ export function loadMessages() {
     usedLanguage.forEach(lang => {
         axios.get(`/api/vocabularies?locale=${lang}`, {
             headers: {
-                'Authorization': 'bearer 734b7752accc11960c0e2d24ed48a4f90df376f9aee549e2c21123594452441d49109c425b0dc75686de3a78042d11dec4362b673292af2e4f725e64ba5279d0b43603a60d43147bea13670c2d0ce47645028f6e56d97422db06a81f911f2a6df20d83ce49da3b03101f3cec6170481c31714d93b731a75bda719808921afd35'
+                'Authorization': 'bearer a3dfa9be05685a433a1e55cdf47d8c9e0ac350e704ebca9380e6c996ff9f8243ddce8da133d9a3c23e5e1b3626565807ecd41eed1778e2809e8205c1b58d0e9226f902083ef24b542d326c0b42c9b4b61ce8e983a7aae274fca12d3669a662f5cc2a41084c7a2043d1d12245273972616731373626c96c374133089be91d57f0'
             }
         }).then(response => {
 

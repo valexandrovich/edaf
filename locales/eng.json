@@ -11,7 +11,8 @@
         "becomeAPartner": "Become a partner",
         "privacyPolicy": "Privacy policy"
     },
-
+    {
+        { $t('mainMenu.') } }
 
     "home": {
         "head_1": "FIRST",
