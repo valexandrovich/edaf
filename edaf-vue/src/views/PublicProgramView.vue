@@ -73,7 +73,7 @@
                   />
                 </div>
               </div>
-              <div class="services-card__btn">
+              <!-- <div class="services-card__btn">
                 {{$t('publicProgram.subscribe')}}
                 <div class="btn-arrows">
                   <span></span>
@@ -83,7 +83,7 @@
                   <span></span>
                   <span></span>
                 </div>
-              </div>
+              </div> -->
             </div>
           </div>
           <div data-aos="fade-up" class="services-card grid-cell">
@@ -98,7 +98,7 @@
                   />
                 </div>
               </div>
-              <div class="services-card__btn">
+              <!-- <div class="services-card__btn">
                 {{$t('publicProgram.subscribe')}}
                 <div class="btn-arrows">
                   <span></span>
@@ -108,7 +108,7 @@
                   <span></span>
                   <span></span>
                 </div>
-              </div>
+              </div> -->
             </div>
           </div>
           <div data-aos="fade-up" class="services-card grid-cell">
@@ -123,7 +123,7 @@
                   />
                 </div>
               </div>
-              <div class="services-card__btn">
+              <!-- <div class="services-card__btn">
                 {{$t('publicProgram.subscribe')}}
                 <div class="btn-arrows">
                   <span></span>
@@ -133,7 +133,7 @@
                   <span></span>
                   <span></span>
                 </div>
-              </div>
+              </div> -->
             </div>
           </div>
           <div data-aos="fade-up" class="services-card grid-cell">
@@ -150,7 +150,7 @@
                   />
                 </div>
               </div>
-              <div class="services-card__btn">
+              <!-- <div class="services-card__btn">
                 {{$t('publicProgram.subscribe')}}
                 <div class="btn-arrows">
                   <span></span>
@@ -160,7 +160,7 @@
                   <span></span>
                   <span></span>
                 </div>
-              </div>
+              </div> -->
             </div>
           </div>
           <div data-aos="fade-up" class="services-card grid-cell">
@@ -175,7 +175,7 @@
                   />
                 </div>
               </div>
-              <div class="services-card__btn">
+              <!-- <div class="services-card__btn">
                 {{$t('publicProgram.subscribe')}}
                 <div class="btn-arrows">
                   <span></span>
@@ -185,7 +185,7 @@
                   <span></span>
                   <span></span>
                 </div>
-              </div>
+              </div> -->
             </div>
           </div>
           <div data-aos="fade-up" class="services-card grid-cell">
@@ -200,7 +200,7 @@
                   />
                 </div>
               </div>
-              <div class="services-card__btn">
+              <!-- <div class="services-card__btn">
                 {{$t('publicProgram.subscribe')}}
                 <div class="btn-arrows">
                   <span></span>
@@ -210,7 +210,7 @@
                   <span></span>
                   <span></span>
                 </div>
-              </div>
+              </div> -->
             </div>
           </div>
         </div>
