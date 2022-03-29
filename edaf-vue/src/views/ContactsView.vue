@@ -51,7 +51,7 @@
 
               <div class="info-item__subitem">
                 <ul class="info-item__subitem-link-list">
-                  <li>
+                  <!-- <li>
                     <a href="#" class="info-item__subitem-link social-link"
                       >Twitter</a
                     >
@@ -60,7 +60,7 @@
                     <a href="#" class="info-item__subitem-link social-link"
                       >Linkedin</a
                     >
-                  </li>
+                  </li> -->
                   <li>
                     <a
                       href="mailto:info@edaf.eu.com"
@@ -72,15 +72,15 @@
 
                 <ul class="info-item__subitem-link-list">
                   <li>
-                    <a href="#" class="info-item__subitem-link social-link"
+                    <a href="https://www.facebook.com/V.Art.digital/" class="info-item__subitem-link social-link"
                       >Instagram</a
                     >
                   </li>
-                  <li>
+                  <!-- <li>
                     <a href="#" class="info-item__subitem-link social-link"
                       >Facebook</a
                     >
-                  </li>
+                  </li> -->
                 </ul>
               </div>
             </div>
@@ -101,12 +101,12 @@
               <div class="info-item__subitem">
                 <ul class="info-item__subitem-link-list">
                   <li>
-                    <a href="#" class="info-item__subitem-link social-link"
+                    <a href="https://twitter.com/V_Art_Digital" class="info-item__subitem-link social-link"
                       >Twitter</a
                     >
                   </li>
                   <li>
-                    <a href="#" class="info-item__subitem-link social-link"
+                    <a href="https://www.linkedin.com/company/42436332/" class="info-item__subitem-link social-link"
                       >Linkedin</a
                     >
                   </li>
@@ -114,12 +114,12 @@
 
                 <ul class="info-item__subitem-link-list">
                   <li>
-                    <a href="#" class="info-item__subitem-link social-link"
+                    <a href="https://instagram.com/v.art.digital?igshid=twe6mh6mrdcz" class="info-item__subitem-link social-link"
                       >Instagram</a
                     >
                   </li>
                   <li>
-                    <a href="#" class="info-item__subitem-link social-link"
+                    <a href="https://www.facebook.com/V.Art.digital/" class="info-item__subitem-link social-link"
                       >Facebook</a
                     >
                   </li>
