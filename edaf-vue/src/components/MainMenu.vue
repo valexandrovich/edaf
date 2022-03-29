@@ -60,6 +60,7 @@
           <div class="menu-section__column">
             <div class="menu-section__lang menu-section__lang--desk">
               <button
+              style="font-size: 25px;"
                 class="
                   menu-section__lang-btn menu-section__lang-btn-l
                   social-link
@@ -68,8 +69,9 @@
               >
                 UK
               </button>
-              <span>|</span>
+              <span style="font-size: 25px;">|</span>
               <button
+              style="font-size: 25px;"
                 class="
                   menu-section__lang-btn
                   active
@@ -82,7 +84,7 @@
               </button>
             </div>
 
-            <div class="menu-section__images-container">
+            <div style="visibility: hidden;" class="menu-section__images-container">
               <a href="#" class="menu-section__container-IWT">
                 <picture class="picture menu-section__IWT-image">
                   <source
@@ -165,11 +167,11 @@
           "
         >
           <li>
-            <a href="#" class="menu-section__footer-link social-link">V-Art</a>
+            <a href="https://v-art.digital/" class="menu-section__footer-link social-link">V-Art</a>
           </li>
           <li class="menu-section__footer-link-container--center">
-            <a href="#" class="menu-section__footer-link social-link"
-              >© 2022 V-Art</a
+            <p href="#" class="menu-section__footer-link social-link"
+              >© 2022 V-Art</p
             >
           </li>
         </ul>
@@ -181,7 +183,7 @@
         >
           
           <li>
-            <a href="#" class="menu-section__footer-link social-link"
+            <a href="https://dev.v-art.digital/wp-content/uploads/2021/04/privacy-policy.pdf" class="menu-section__footer-link social-link"
               >{{$t('mainMenu.privacyPolicy')}}</a
             >
           </li>
