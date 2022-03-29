@@ -200,7 +200,7 @@ export default {
             this.$i18n.locale = locale
         },
         go(path){
-          this.$router.push({name: path})
+          this.$router.push({name: path}).catch(err => {})
         }
     },
      mounted(){

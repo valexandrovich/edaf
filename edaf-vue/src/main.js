@@ -6,6 +6,7 @@ import { i18n } from './plugins/i18n'
 import './assets/styles/style.css';
 import './assets/scripts/index.js'
 
+
 Vue.config.productionTip = false
 
 new Vue({
