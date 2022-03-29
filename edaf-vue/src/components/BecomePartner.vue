@@ -1,6 +1,6 @@
 <template>
   <div>
-       <section id="partner-form" data-popup class="form-section animation hide">
+    <section id="partner-form" data-popup class="form-section animation hide">
       <picture class="form-section__background picture adaptive-image">
         <source
           srcset="@/assets/images/background/form-bg-mob.png"
@@ -27,44 +27,44 @@
           </button>
         </header>
 
-        <h3 class="form-section__heading h3">{{$t('becomePartner.becomeAPartner')}}</h3>
+        <h3 class="form-section__heading h3">
+          {{ $t("becomePartner.becomeAPartner") }}
+        </h3>
 
         <div class="form-section__body">
-          <form
-            data-form
-            action="mailto:someone@example.com"
-            method="post"
-            enctype="text/plain"
-          >
+          <form data-form enctype="text/plain">
             <div class="form-section__input-container">
-              <label for="name">{{$t('becomePartner.firstName')}}</label>
+              <label for="name">{{ $t("becomePartner.firstName") }}</label>
               <input
                 required
                 type="text"
                 placeholder="First name"
                 name="name"
                 id="name"
+                v-model="this.name"
               />
             </div>
 
             <div class="form-section__input-container">
-              <label for="email">{{$t('becomePartner.email')}}</label>
+              <label for="email">{{ $t("becomePartner.email") }}</label>
               <input
                 required
                 type="email"
                 placeholder="Email"
                 name="email"
                 id="email"
+                v-model="this.email"
               />
             </div>
 
             <div class="form-section__input-container">
-              <label for="company">{{$t('becomePartner.company')}}</label>
+              <label for="company">{{ $t("becomePartner.company") }}</label>
               <input
                 type="text"
                 placeholder="Company"
                 name="company"
                 id="company"
+                v-model="this.company"
               />
             </div>
 
@@ -74,13 +74,16 @@
                 form-section__input-container--message
               "
             >
-              <label for="message">{{$t('becomePartner.writeAMessage')}}</label>
+              <label for="message">{{
+                $t("becomePartner.writeAMessage")
+              }}</label>
               <input
                 required
                 type="text"
                 placeholder="Write a Message"
                 name="message"
                 id="message"
+                v-model="this.message"
               />
             </div>
 
@@ -95,15 +98,15 @@
                 />
 
                 <label for="accept">
-                  {{$t('becomePartner.iAccept')}}
+                  {{ $t("becomePartner.iAccept") }}
                   <a href="#" class="form-section__input-accept social-link">
-                    {{$t('becomePartner.privacyPolicy')}}
+                    {{ $t("becomePartner.privacyPolicy") }}
                   </a>
                 </label>
               </div>
 
-              <button type="submit" class="js-send-btn form-section__btn btn">
-                {{$t('becomePartner.send')}}
+              <button @click="send()" class="js-send-btn form-section__btn btn">
+                {{ $t("becomePartner.send") }}
                 <span class="btn-arrows">
                   <span></span>
                   <span></span>
@@ -123,10 +126,51 @@
 
 <script>
 export default {
+  data() {
+    return {
+      name: "name",
+      email: "email@email.com",
+      company: "company",
+      message: "message",
+    };
+  },
 
-}
+  methods: {
+    send() {
+      var agree = document.getElementById("accept");
+      if (agree.checked) {
+        var axios = require("axios");
+        var data = JSON.stringify({
+          data: {
+            name: this.name,
+            email: this.email,
+            company: this.company,
+            message: this.message,
+          },
+        });
+
+        var config = {
+          method: "post",
+          url: "/api/partner-requests",
+          headers: {
+            Authorization:
+              "bearer a3dfa9be05685a433a1e55cdf47d8c9e0ac350e704ebca9380e6c996ff9f8243ddce8da133d9a3c23e5e1b3626565807ecd41eed1778e2809e8205c1b58d0e9226f902083ef24b542d326c0b42c9b4b61ce8e983a7aae274fca12d3669a662f5cc2a41084c7a2043d1d12245273972616731373626c96c374133089be91d57f0",
+            "Content-Type": "application/json",
+          },
+          data: data,
+        };
+
+        axios(config)
+          .then(function (response) {
+            // window.location.href = "/";
+          })
+          .catch(function (error) {
+          });
+      }
+    },
+  },
+};
 </script>
 
 <style>
-
 </style>
