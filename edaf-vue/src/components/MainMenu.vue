@@ -32,24 +32,24 @@
           <div class="menu-section__column">
             <ul class="menu-section__link-list">
               <li>
-                <a class="menu-section__link-item h3" href="/#/">{{$t('mainMenu.home')}}</a>
+                <a class="menu-section__link-item h3" @click="go('home')">{{$t('mainMenu.home')}}</a>
               </li>
 
               <li>
-                <a class="menu-section__link-item h3" href="/#/public-program"
+                <a class="menu-section__link-item h3" @click="go('public-program')"
                   >{{$t('mainMenu.publicProgram')}}</a
                 >
               </li>
 
               <li>
-                <a class="menu-section__link-item h3" href="/#/application"
+                <a class="menu-section__link-item h3" @click="go('application')"
                   >{{$t('mainMenu.application')}}</a
                 >
               </li>
 
               <li>
                 <!-- <router-link to="contacts"> -->
-                <a class="menu-section__link-item h3" href="/#/contacts"
+                <a class="menu-section__link-item h3" @click="go('contacts')"
                   >{{$t('mainMenu.contacts')}}</a
                 >
                 <!-- </router-link> -->
@@ -198,6 +198,9 @@ export default {
         setLocale(locale){
             localStorage.setItem('lang',locale)
             this.$i18n.locale = locale
+        },
+        go(path){
+          this.$router.push({name: path})
         }
     },
      mounted(){

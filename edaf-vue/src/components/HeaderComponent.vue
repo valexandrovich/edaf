@@ -1,6 +1,6 @@
 <template>
   <header class="menu container-desktop">
-  <a href="index.html" class="social-link-secondary logotype">
+  <a @click="go('home')" class="social-link-secondary logotype">
     <img  src="@/assets/images/logo/header-logo.svg" alt="Logotype">
   </a>
 
@@ -50,7 +50,9 @@ export default {
             }))
   },
   methods: {
-
+      go(path){
+          this.$router.push({name: path}).catch(err => {})
+      }
   }
 };
 </script>
