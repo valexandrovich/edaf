@@ -209,7 +209,7 @@
           <h3 data-aos="fade-up" class="criteria-heading container h4">
             <span>03 / </span>
             {{$t('application.title5')}} - <br />
-            04/03/2022
+            03/04/2022
           </h3>
           <div class="criteria-wrapper">
             <div data-aos="fade-up" class="tiles tiles--row">
