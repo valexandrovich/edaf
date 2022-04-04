@@ -41,7 +41,7 @@
                 placeholder="First name"
                 name="name"
                 id="name"
-                v-model="this.name"
+                v-model="name"
               />
             </div>
 
@@ -53,7 +53,7 @@
                 placeholder="Email"
                 name="email"
                 id="email"
-                v-model="this.email"
+                v-model="email"
               />
             </div>
 
@@ -64,7 +64,7 @@
                 placeholder="Company"
                 name="company"
                 id="company"
-                v-model="this.company"
+                v-model="company"
               />
             </div>
 
@@ -83,7 +83,7 @@
                 placeholder="Write a Message"
                 name="message"
                 id="message"
-                v-model="this.message"
+                v-model="message"
               />
             </div>
 
@@ -105,7 +105,7 @@
                 </label>
               </div>
 
-              <button @click="send()" class="js-send-btn form-section__btn btn">
+              <button @click="send()" type="button" class="js-send-btn form-section__btn btn">
                 {{ $t("becomePartner.send") }}
                 <span class="btn-arrows">
                   <span></span>
@@ -151,7 +151,7 @@ export default {
 
         var config = {
           method: "post",
-          url: "https://edaf.art/cms/api/partner-requests",
+          url: "https://edaf.sbs/api/partner-requests",
           headers: {
             Authorization:
               "bearer a3dfa9be05685a433a1e55cdf47d8c9e0ac350e704ebca9380e6c996ff9f8243ddce8da133d9a3c23e5e1b3626565807ecd41eed1778e2809e8205c1b58d0e9226f902083ef24b542d326c0b42c9b4b61ce8e983a7aae274fca12d3669a662f5cc2a41084c7a2043d1d12245273972616731373626c96c374133089be91d57f0",
@@ -160,11 +160,14 @@ export default {
           data: data,
         };
 
+
+
         axios(config)
           .then(function (response) {
-            // window.location.href = "/";
+            window.location.href = "/";
           })
           .catch(function (error) {
+            console.log(error)
           });
       }
     },
