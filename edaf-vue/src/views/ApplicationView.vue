@@ -1,7 +1,7 @@
 <template>
   <div>
       <header-component></header-component>
-      <main-menu></main-menu>
+      <menu-component></menu-component>
     <section class="collection-hero">
       <div class="collection-hero__container container">
         <h1 data-aos="fade-up" class="h2 collection-hero__heading">
@@ -208,10 +208,10 @@
         <div class="criteria-block">
           <h3 data-aos="fade-up" class="criteria-heading container h4">
             <span>03 / </span>
-            {{$t('application.title5')}} - <br />
-            03/04/2022
+            {{$t('application.title5')}} <br />
+            <!-- 03/04/2022 -->
           </h3>
-          <div class="criteria-wrapper">
+          <!-- <div class="criteria-wrapper">
             <div data-aos="fade-up" class="tiles tiles--row">
               <ul class="tiles-list">
                 <li class="tiles-item">
@@ -233,7 +233,7 @@
                 {{$t('application.d7')}}
               </p>
             </div>
-          </div>
+          </div> -->
         </div>
       </div>
     </section>
@@ -481,22 +481,27 @@
       </div>
     </section>
 
-        <become-partner></become-partner>
+        <partner-form></partner-form>
     <footer-component></footer-component>
   </div>
 </template>
 
 <script>
 import HeaderComponent from "../components/HeaderComponent.vue";
+import MenuComponent from "../components/MenuComponent.vue";
+import PartnerForm from "../components/PartnerForm.vue";
+import SpeakerForm from "../components/SpeakerForm.vue";
 import FooterComponent from "../components/FooterComponent.vue";
-import MainMenu from "../components/MainMenu.vue";
-import BecomePartner from "../components/BecomePartner.vue";
 export default {
+  metaInfo: {
+    title: "FIRST PAN-EUROPEAN DIGITAL ART FAIR",
+  },
   components: {
     HeaderComponent,
+    MenuComponent,
+    PartnerForm,
+    SpeakerForm,
     FooterComponent,
-    MainMenu,
-    BecomePartner
   },
 };
 </script>

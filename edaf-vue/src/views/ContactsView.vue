@@ -1,7 +1,7 @@
 <template>
   <div>
     <header-component></header-component>
-    <main-menu></main-menu>
+    <menu-component></menu-component>
     <div class="contacts">
       <div class="contacts__container container-desktop">
         <!-- Absolute elements -->
@@ -131,7 +131,7 @@
         <footer-component></footer-component>
       </div>
     </div>
-<become-partner></become-partner>
+<partner-form></partner-form>
     
   </div>
 </template>
@@ -139,16 +139,16 @@
 <script>
 import HeaderComponent from "../components/HeaderComponent.vue";
 import FooterComponent from "../components/FooterComponent.vue";
-import MainMenu from "../components/MainMenu.vue";
-import BecomePartner from "../components/BecomePartner.vue";
+import MenuComponent from "../components/MenuComponent.vue";
+import PartnerForm from "../components/PartnerForm.vue";
 // import "../assets/scripts/index.js";
 
 export default {
   components: {
     HeaderComponent,
     FooterComponent,
-    MainMenu,
-    BecomePartner
+    MenuComponent,
+    PartnerForm
   },
 };
 </script>

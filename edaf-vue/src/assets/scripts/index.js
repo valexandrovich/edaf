@@ -1,5 +1,5 @@
-// import dimas from './dimas.js';
-// import sam from './sam.js';
+import dimas from './dimas.js';
+import sam from './sam.js';
 
 document.addEventListener('DOMContentLoaded', function() {
         // dimas();

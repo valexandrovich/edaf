@@ -173,8 +173,9 @@
         "edaf": "edaf"
     },
 
-    "becomePartner": {
+    "becomeForm": {
         "becomeAPartner": "Стати партнером",
+        "becomeASpeaker": "Стати спікером",
         "firstName": "Ім'я",
         "email": "Email",
         "company": "Компанія",

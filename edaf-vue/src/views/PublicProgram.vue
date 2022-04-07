@@ -1,7 +1,7 @@
 <template>
   <div>
     <header-component></header-component>
-    <main-menu></main-menu>
+    <menu-component></menu-component>
     <section class="collection-hero">
       <div class="collection-hero__container container">
         <h1 data-aos="fade-up" class="h2 collection-hero__heading">
@@ -230,141 +230,30 @@
       </div>
     </div>
 
-        <become-partner></become-partner>
+        <partner-form></partner-form>
+        <speaker-form></speaker-form>
 
-    <section id="speaker-form" data-popup class="form-section animation hide">
-      <picture class="form-section__background picture adaptive-image">
-        <source
-          srcset="@/assets/images/background/form-bg-mob.png"
-          media="(max-width: 768px)"
-        />
-        <source
-          srcset="@/assets/images/background/form-bg-desk.png"
-          media="(min-width: 767px)"
-        />
-        <img
-          src="@/assets/images/background/form-bg-desk.png"
-          alt="Form background image"
-        />
-      </picture>
-
-      <div class="form-section__container container-desktop">
-        <header class="menu">
-          <a href="index.html" class="logotype">
-            <img src="@/assets/images/logo/header-logo.svg" alt="Logotype" />
-          </a>
-
-          <button data-close class="menu__btn">
-            <img src="@/assets/icons/close.svg" alt="Close" />
-          </button>
-        </header>
-
-        <h3 class="form-section__heading h3">{{$t('publicProgram.becomeASpeaker')}}</h3>
-
-        <div class="form-section__body">
-          <form
-            data-form
-            action="mailto:someone@example.com"
-            method="post"
-            enctype="text/plain"
-          >
-            <div class="form-section__input-container">
-              <label for="name-2">{{$t('publicProgram.firstName')}}</label>
-              <input
-                required
-                type="text"
-                placeholder="First name"
-                name="name"
-                id="name-2"
-              />
-            </div>
-
-            <div class="form-section__input-container">
-              <label for="email-2">{{$t('publicProgram.email')}}</label>
-              <input
-                required
-                type="email"
-                placeholder="Email"
-                name="email"
-                id="email-2"
-              />
-            </div>
-
-            <div class="form-section__input-container">
-              <label for="company-2">{{$t('publicProgram.company')}}</label>
-              <input
-                type="text"
-                placeholder="Company"
-                name="company"
-                id="company-2"
-              />
-            </div>
-
-            <div
-              class="
-                form-section__input-container
-                form-section__input-container--message
-              "
-            >
-              <label for="message-2">{{$t('publicProgram.writeAMessage')}}</label>
-              <input
-                required
-                type="text"
-                placeholder="Write a Message"
-                name="message"
-                id="message-2"
-              />
-            </div>
-
-            <div class="form-section__footer">
-              <div class="form-section__input-container checkbox">
-                <input
-                  required
-                  class="form-section__custom-checkbox"
-                  type="checkbox"
-                  name="accept"
-                  id="accept-2"
-                />
-
-                <label for="accept-2">
-                  {{$t('publicProgram.iAccept')}}
-                  <a href="#" class="form-section__input-accept social-link">
-                    {{$t('publicProgram.privacyPolicy')}}
-                  </a>
-                </label>
-              </div>
-
-              <button type="submit" class="js-send-btn form-section__btn btn">
-                {{$t('publicProgram.send')}}
-                <span class="btn-arrows">
-                  <span></span>
-                  <span></span>
-                  <span></span>
-                  <span></span>
-                  <span></span>
-                  <span></span>
-                </span>
-              </button>
-            </div>
-          </form>
-        </div>
-      </div>
-    </section>
+    
       <footer-component></footer-component>
   </div>
 </template>
 
 <script>
 import HeaderComponent from "../components/HeaderComponent.vue";
+import MenuComponent from "../components/MenuComponent.vue";
+import PartnerForm from "../components/PartnerForm.vue";
+import SpeakerForm from "../components/SpeakerForm.vue";
 import FooterComponent from "../components/FooterComponent.vue";
-import MainMenu from "../components/MainMenu.vue";
-import BecomePartner from "../components/BecomePartner.vue";
 export default {
+  metaInfo: {
+    title: "FIRST PAN-EUROPEAN DIGITAL ART FAIR",
+  },
   components: {
     HeaderComponent,
+    MenuComponent,
+    PartnerForm,
+    SpeakerForm,
     FooterComponent,
-    MainMenu,
-    BecomePartner
   },
 };
 </script>

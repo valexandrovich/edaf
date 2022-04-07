@@ -172,8 +172,9 @@
         "edaf": "edaf"
     },
 
-    "becomePartner": {
+    "becomeForm": {
         "becomeAPartner": "Become a Partner",
+        "becomeASpeaker": "Become a Speaker",
         "firstName": "First name",
         "email": "Email",
         "company": "Company",

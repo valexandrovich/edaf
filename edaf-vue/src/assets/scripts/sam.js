@@ -2,12 +2,9 @@ export default function() {
     const bodyScrollLock = require('body-scroll-lock')
     const disableBodyScroll = bodyScrollLock.disableBodyScroll;
     const enableBodyScroll = bodyScrollLock.enableBodyScroll;
-    console.log('disableBodyScroll()')
     disableBodyScroll()
 
     window.onload = function() {
-        console.log('onload')
-        console.log('enableBodyScroll()')
         enableBodyScroll();
 
         const selectors = {
@@ -41,7 +38,6 @@ export default function() {
             }))
 
         function homeSection() {
-            console.log('home section')
             const homeSection = document.querySelector('#home-section');
 
             if (homeSection) {
