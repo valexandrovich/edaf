@@ -85,7 +85,7 @@
           </div>
 
           <div class="menu-section__images-container">
-            <a @click="go('fair-online')" class="menu-section__container-IWT">
+            <a @click="go('fairs-online')" class="menu-section__container-IWT">
               <picture class="picture menu-section__IWT-image">
                 <source
                   srcset="@/assets/images/other/menu1-mob.png"
@@ -115,7 +115,7 @@
               </div>
             </a>
 
-            <a  class="menu-section__container-IWT">
+            <a @click="go('physical-fairs')" class="menu-section__container-IWT">
               <picture class="picture menu-section__IWT-image">
                 <source
                   srcset="@/assets/images/other/menu2-mob.png"

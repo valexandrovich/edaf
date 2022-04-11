@@ -11,8 +11,6 @@
         "becomeAPartner": "Become a partner",
         "privacyPolicy": "Privacy policy"
     },
-
-
     "home": {
         "head_1": "FIRST",
         "head_2": "PAN-EUROPEAN",
@@ -71,8 +69,34 @@
         "privacyPolicy": "Privacy Policy",
         "send": "Send"
     },
-
-
+    "events": {
+        "newEvents": "New Events",
+        "pastEvents": "Past Events",
+        "panelDiscussionAndForum": {
+            "title": "Panel Discussion And Forum",
+            "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
+        },
+        "artistTalks": {
+            "title": "Artist Talks",
+            "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
+        },
+        "collectorTalks": {
+            "title": "Collector Talks",
+            "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
+        },
+        "galleryAndMuseumSessions": {
+            "title": "Galleries & museums sessions",
+            "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
+        },
+        "masterclasses": {
+            "title": "Masterclasses",
+            "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
+        },
+        "privateAndPressTours": {
+            "title": "Private & press tours",
+            "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
+        }
+    },
     "application": {
         "application": "Application",
         "title": "To take part in the European Digital Art Fair you are able to apply as an artist, a gallery/museum/other institution or a dealer.",
@@ -164,14 +188,21 @@
         "montenegro": "Montenegro",
         "switzerland": "Switzerland",
         "sweden": "Sweden"
-
     },
-
     "contacts": {
         "contacts": "contacts",
         "edaf": "edaf"
     },
-
+    "fairs": {
+        "online": "ONLINE",
+        "fair": "FAIR",
+        "goToOnlineFair": "Go to online fair",
+        "physical": "PHYSICAL",
+        "goToPhysicalFair": "Go to physical fair"
+    },
+    "fairOnline": {
+        "": "Data Fossils"
+    },
     "becomeForm": {
         "becomeAPartner": "Become a Partner",
         "becomeASpeaker": "Become a Speaker",

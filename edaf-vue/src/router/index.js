@@ -4,7 +4,12 @@ import HomeView from '../views/HomeView.vue'
 import ApplicationView from '../views/ApplicationView.vue'
 import PublicProgram from '../views/PublicProgram.vue'
 import ContactsView from '../views/ContactsView.vue'
-import FairOnline from '../views/FairOnline.vue'
+import FairsOnline from '../views/FairsOnline.vue'
+import PhysicalFairs from '../views/PhysicalFairs.vue'
+import Fairs from '../views/Fairs.vue'
+import Events from '../views/Events.vue'
+import ProductCard from '../views/ProductCard.vue'
+import Event from '../views/Event.vue'
 
 Vue.use(VueRouter)
 
@@ -29,9 +34,34 @@ const routes = [{
         component: ContactsView
     },
     {
-        path: '/fair-online',
-        name: 'fair-online',
-        component: FairOnline
+        path: '/fairs',
+        name: 'fairs',
+        component: Fairs
+    },
+    {
+        path: '/fairs-online',
+        name: 'fairs-online',
+        component: FairsOnline
+    },
+    {
+        path: '/physical-fairs',
+        name: 'physical-fairs',
+        component: PhysicalFairs
+    },
+    {
+        path: '/events',
+        name: 'events',
+        component: Events
+    },
+    {
+        path: '/event',
+        name: 'event',
+        component: Event
+    },
+    {
+        path: '/product',
+        name: 'product',
+        component: ProductCard
     }
 
 ]

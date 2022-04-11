@@ -11,8 +11,6 @@
         "becomeAPartner": "Стати партнером",
         "privacyPolicy": "Політика конфедиційності"
     },
-
-
     "home": {
         "head_1": "ПЕРШИЙ",
         "head_2": "ПАНЄВРОПЕЙСЬКИЙ",
@@ -32,7 +30,6 @@
         "instagram": "Instagram",
         "facebook": "Facebook",
         "part1about2": "V-Art знаходиться на перетині принаймні чотирьох озночасно пов’язаних, тим не менш, різних ринків: NFT, Art, Metaverse та AR/VR. Забезпечуючи повний цикл взаємодії із цифровим мистецтвом, V-Art надає нову висококонкурентну пропозицію, яка більше відповідає довгостроковим тенденціям цифрової сфери.",
-
         "part2name": "КОЛЕКЦІЯ DSL",
         "part2about1": "Колекція dsl, що належить Домінік, Сільвену, Карен та Рафаелю Леві, складається з найвідоміших творів китайського сучасного мистецтва та 200 провідних художників галузі. Ця колекція відома своєю новаторською практикою у використанні цифрових технологій (включаючи додаток з 2012 року та дві відеоігри), стала одним із яскравих вогнів у цифровій трансформації світу мистецтва.  Сьогодні dslcollection все частіше залучається до змішаної реальності, що подолає розрив між мейнстрімом світу мистецтва та передовим технологічним обладнанням.",
         "part3name": "Straight Fire",
@@ -50,7 +47,6 @@
         "privacyPolicy": "Політику конфедеційності",
         "send": "Відправити"
     },
-
     "publicProgram": {
         "publicProgram": "ПУБЛІЧНА ПРОГРАМА",
         "about": "У рамках European Digital Art Fair буде проведено публічну програму, метою якої є задати нової візії на світ колекціонування цифрового мистецтва, тож вона буде повністю присвячена цифровому мистецтву в структурі сучасного мистецтва та артринку, надавши можливість відвідувати такі заходи:",
@@ -73,7 +69,34 @@
         "privacyPolicy": "Політику конфедеційності",
         "send": "Відправити"
     },
-
+    "events": {
+        "newEvents": "Нові події",
+        "pastEvents": "Минулі події",
+        "panelDiscussionAndForum": {
+            "title": "UA!! Панелі дискусій та форуми",
+            "description": "UA!! Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
+        },
+        "artistTalks": {
+            "title": "UA!! Artist Talks",
+            "description": "UA!! Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
+        },
+        "collectorTalks": {
+            "title": "UA!! Collector Talks",
+            "description": "UA!! Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
+        },
+        "galleryAndMuseumSessions": {
+            "title": "UA!! Galleries & museums sessions",
+            "description": "UA!! Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
+        },
+        "masterclasses": {
+            "title": "UA!! Masterclasses",
+            "description": "UA!! Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
+        },
+        "privateAndPressTours": {
+            "title": "UA!! Private & press tours",
+            "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
+        }
+    },
     "application": {
         "application": "ПОДАТИ ЗАЯВКУ",
         "title": "Щоб взяти участь у Європейському ярмарку цифрового мистецтва, ви можете подати заявку як художник, галерея/музей/інша установа чи дилер.",
@@ -122,8 +145,6 @@
         "dealer": "Дилер",
         "participating": "КРАЇНИ",
         "countries": "УЧАСНИЦІ",
-
-
         "austria": "Австрія",
         "albania": "Албанія",
         "andorra": "Андорра",
@@ -172,7 +193,6 @@
         "contacts": "контакти",
         "edaf": "edaf"
     },
-
     "becomeForm": {
         "becomeAPartner": "Стати партнером",
         "becomeASpeaker": "Стати спікером",
@@ -184,7 +204,16 @@
         "privacyPolicy": "Політику конфедеційності",
         "send": "Відправити"
     },
-
+    "fairs": {
+        "online": "ОНЛАЙН",
+        "fair": "ЯРМАРКИ",
+        "goToOnlineFair": "До онлайн ярмарок",
+        "physical": "ОФЛАЙН",
+        "goToPhysicalFair": "До офлайн ярмарок"
+    },
+    "fairOnline": {
+        "": "Data Fossils"
+    },
     "footer": {
         "pp": "Політика конфедеційності"
     }

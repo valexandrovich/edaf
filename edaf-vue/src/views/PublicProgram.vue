@@ -59,8 +59,8 @@
           {{$t('publicProgram.program')}}
         </div>
         <div class="public-program__grid grid">
-          <div data-aos="fade-up" class="services-card grid-cell">
-            <a href="#" class="services-card__link"></a>
+          <div  data-aos="fade-up" class="services-card grid-cell">
+            <a class="services-card__link" @click="go('events', 'panelDiscussionAndForum')" ></a>
             <h2 class="services-card__heading h5">
               {{$t('publicProgram.panel')}}
             </h2>
@@ -87,7 +87,7 @@
             </div>
           </div>
           <div data-aos="fade-up" class="services-card grid-cell">
-            <a href="#" class="services-card__link"></a>
+            <a class="services-card__link" @click="go('events', 'artistTalks')"></a>
             <h2 class="services-card__heading h5">{{$t('publicProgram.artistTalks')}}</h2>
             <div class="services-card__inner">
               <div class="services-card__image">
@@ -112,7 +112,7 @@
             </div>
           </div>
           <div data-aos="fade-up" class="services-card grid-cell">
-            <a href="#" class="services-card__link"></a>
+            <a  class="services-card__link" @click="go('events', 'collectorsTalks')"></a>
             <h2 class="services-card__heading h5">{{$t('publicProgram.collectorsTalks')}}</h2>
             <div class="services-card__inner">
               <div class="services-card__image">
@@ -137,7 +137,7 @@
             </div>
           </div>
           <div data-aos="fade-up" class="services-card grid-cell">
-            <a href="#" class="services-card__link"></a>
+            <a @click="go('events', 'galleriesMuseumesSessions')" class="services-card__link"></a>
             <h2 class="services-card__heading h5">
               {{$t('publicProgram.galleriesMuseumesSessions')}}
             </h2>
@@ -164,7 +164,7 @@
             </div>
           </div>
           <div data-aos="fade-up" class="services-card grid-cell">
-            <a href="#" class="services-card__link"></a>
+            <a @click="go('masterclasses')" class="services-card__link"></a>
             <h2 class="services-card__heading h5">{{$t('publicProgram.masterclasses')}}</h2>
             <div class="services-card__inner">
               <div class="services-card__image">
@@ -189,7 +189,7 @@
             </div>
           </div>
           <div data-aos="fade-up" class="services-card grid-cell">
-            <a href="#" class="services-card__link"></a>
+            <a @click="go('events', 'privatePressTours')" class="services-card__link"></a>
             <h2 class="services-card__heading h5">{{$t('publicProgram.privatePressTours')}}</h2>
             <div class="services-card__inner">
               <div class="services-card__image">
@@ -255,6 +255,13 @@ export default {
     SpeakerForm,
     FooterComponent,
   },
+  methods: {
+    go(path, type){
+      this.$router.push({name: path, params: {
+        'type': type
+      } })
+    }
+  }
 };
 </script>
 

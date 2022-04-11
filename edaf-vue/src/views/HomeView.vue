@@ -29,6 +29,7 @@
           DIGITAL <br />
           ART FAIR <br />
         </h1>
+        
       </div>
     </section>
 
@@ -67,12 +68,8 @@
             <br />
             {{ $t("home.head_4") }}
           </h1>
-
-          <a
-            style="visibility: hidden"
-            href="fairs.html"
-            class="index-hero__btn btn btn--transparent"
-          >
+<button @click="tst()">TST</button>
+          <a class="index-hero__btn btn btn--transparent" @click="go('fairs')">
             {{ $t("home.goToTheFairs") }}
             <span class="btn-arrows">
               <span></span>
@@ -84,7 +81,6 @@
             </span>
           </a>
         </div>
-
         <div class="index-hero__footer">
           <div
             class="index-hero__footer-column index-hero__footer-column--left"
@@ -563,6 +559,14 @@ export default {
     PartnerForm,
     SpeakerForm,
     FooterComponent,
+  },
+  methods: {
+    tst(){
+      console.log(this.$store.getters['events/TEST']('sometext'))
+    },
+    go(path) {
+      this.$router.push(path);
+    },
   },
 };
 </script>
