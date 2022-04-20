@@ -84,7 +84,7 @@
             </button>
           </div>
 
-          <div class="menu-section__images-container">
+          <div class="menu-section__images-container" style="display: none;">
             <a @click="go('fairs-online')" class="menu-section__container-IWT">
               <picture class="picture menu-section__IWT-image">
                 <source

@@ -69,7 +69,7 @@
             {{ $t("home.head_4") }}
           </h1>
 
-          <a class="index-hero__btn btn btn--transparent" @click="go('fairs')">
+          <a style="display: none;" class="index-hero__btn btn btn--transparent" @click="go('fairs')">
             {{ $t("home.goToTheFairs") }}
             <span class="btn-arrows">
               <span></span>
