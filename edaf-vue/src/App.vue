@@ -14,7 +14,7 @@ export default {
       lang: "en-US",
     },
     meta: [
-      { charset: "utf-8" },
+      { charset: "utf-8" }, 
       {
         name: "viewport",
         content:
@@ -40,7 +40,7 @@ export default {
       },
       {
         property: "og:image",
-        content: "https://edaf.art/images/opengraph.png",
+        content: "~/assets/images/opengraph.png",
       },
       // // Twitter
       { property: "twitter:card", content: "summary_large_image" },
@@ -56,7 +56,7 @@ export default {
       },
       {
         property: "twitter:image",
-        content: "https://edaf.art/images/opengraph.png",
+        content: "~/assets/images/opengraph.png",
       },
     ],
   },

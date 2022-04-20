@@ -68,7 +68,7 @@
             <br />
             {{ $t("home.head_4") }}
           </h1>
-<button @click="tst()">TST</button>
+
           <a class="index-hero__btn btn btn--transparent" @click="go('fairs')">
             {{ $t("home.goToTheFairs") }}
             <span class="btn-arrows">
@@ -95,11 +95,11 @@
                 src="@/assets/images/logo/Subtract.svg"
                 alt="logo"
               />
-              <img
+              <!-- <img
                 class="index-hero__footer-logo"
                 src="@/assets/images/logo/m17.svg"
                 alt="logo"
-              />
+              /> -->
             </div>
           </div>
           <div
@@ -126,6 +126,11 @@
               <img
                 class="index-hero__footer-logo"
                 src="@/assets/images/logo/image5.svg"
+                alt="logo"
+              />
+                      <img
+                class="index-hero__footer-logo"
+                src="@/assets/images/logo/m17.svg"
                 alt="logo"
               />
             </div>
@@ -353,7 +358,7 @@
                 </div>
 
                 <h3 data-aos="fade-up" class="index-IWT__column-heading">
-                  {{ $t("home.part1name") }}
+                  <!-- {{ $t("home.part1name") }} -->
                 </h3>
               </div>
             </div>
@@ -515,6 +520,41 @@
                 >
                 <a
                   href="https://www.facebook.com/electricartefacts"
+                  class="index-partners__item-facebook social-link"
+                  >{{ $t("home.facebook") }}</a
+                >
+              </div>
+            </div>
+          </div>
+
+
+            <div data-aos="fade-up" class="index-partners__item">
+            <div class="index-partners__logo-container">
+              <img
+                class="index-partners__logo"
+                src="@/assets/images/logo/image 7.png"
+                alt="logo"
+                width="80px"
+              />
+            </div>
+
+            <div class="index-partners__item-content">
+              <h3 class="index-partners__item-heading h4">
+                {{ $t("home.part7name") }}
+              </h3>
+
+              <p class="index-partners__item-body">
+                {{ $t("home.part7about1") }}
+              </p>
+
+              <div class="index-partners__item-links">
+                <a
+                  href="https://www.instagram.com/m17art.center/ "
+                  class="index-partners__item-instagram social-link"
+                  >{{ $t("home.instagram") }}</a
+                >
+                <a
+                  href="https://www.facebook.com/m17art.center"
                   class="index-partners__item-facebook social-link"
                   >{{ $t("home.facebook") }}</a
                 >
