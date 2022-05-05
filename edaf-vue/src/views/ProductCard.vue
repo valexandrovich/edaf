@@ -1,5 +1,7 @@
 <template>
   <div>
+    <header-component></header-component>
+    <menu-component></menu-component>
     <section class="product-page">
       <div class="product-page__hero product-hero">
         <div class="product-hero__container">
@@ -8,7 +10,7 @@
               <div class="swiper-wrapper">
                 <div class="product-hero__slide swiper-slide">
                   <img
-                    src="@/assets/images/product/pdp-image_1.jpeg"
+                    :src="this.product.attributes.product.imageUrl"
                     alt="Data Fossils"
                     class="product-hero__image"
                   />
@@ -27,10 +29,21 @@
             <div class="product-hero__info">
               <div class="product-hero__wrapper">
                 <h1 data-aos="fade-up" class="product-hero__heading h3">
-                  Data Fossils
+                  {{ this.product.attributes.product.name }}
                 </h1>
-                <div class="product-hero__author">Nirit Binyamini Ben-Meir</div>
-                <div class="product-hero__price h5">
+                <div class="product-hero__author">
+                  {{ this.product.attributes.product.author }}
+                </div>
+                 <div class="product-hero__price h5" v-if="this.product.attributes.product.priceEth">
+                  <span class="product-hero__price--token">
+                   ETH
+                    {{ this.product.attributes.product.priceEth }}
+                  </span>
+                  <span class="product-hero__price--original">
+                    ($ {{ this.product.attributes.product.priceUsd }})
+                  </span>
+                </div>
+                <div class="product-hero__price h5" v-if="this.product.attributes.product.priceNear">
                   <span class="product-hero__price--token">
                     <svg
                       xmlns="http://www.w3.org/2000/svg"
@@ -44,25 +57,35 @@
                         fill="white"
                       />
                     </svg>
-                    1, 500
+                    {{ this.product.attributes.product.priceNear }}
                   </span>
                   <span class="product-hero__price--original">
-                    ($ I5,630)
+                    ($ {{ this.product.attributes.product.priceUsd }})
                   </span>
                 </div>
               </div>
               <ul class="product-hero__list">
                 <li class="product-hero__item">
-                  <span> Edition 1 of 1 </span>
+                  <span>
+                    Edition {{ this.product.attributes.product.edition }}
+                  </span>
                 </li>
                 <li class="product-hero__item">
-                  <span> Owned by: V-Art </span>
+                  <span>
+                    Owned by: {{ this.product.attributes.product.owner }}
+                  </span>
                 </li>
                 <li class="product-hero__item">
-                  <span> Presented by: V-Art </span>
+                  <span>
+                    Presented by:
+                    {{ this.product.attributes.product.presenter }}</span
+                  >
                 </li>
                 <li class="product-hero__item">
-                  <span> Collection: Test Name </span>
+                  <span>
+                    Collection:
+                    {{ this.product.attributes.product.collectionName }}
+                  </span>
                 </li>
               </ul>
               <form action="cart/add" method="POST" class="product-hero__form">
@@ -72,13 +95,13 @@
                     data-price="product_price_here"
                     data-id="product_id_here"
                   >
-                    PRODUCT_NAME_HERE
+                    {{ this.product.attributes.product.name }}
                   </option>
                 </select>
 
-                <button class="product-hero__btn btn">
-                  <span class="show-on-mobile">Bacome a speaker</span>
-                  <span class="hide-on-mobile">Buy</span>
+                <button class="product-hero__btn btn" disabled>
+                  <span class="show-on-mobile">Coming soon</span>
+                  <span class="hide-on-mobile">Coming soon </span>
                   <span class="btn-arrows">
                     <span></span>
                     <span></span>
@@ -98,33 +121,7 @@
                 Artwork description
               </h2>
               <div data-aos="fade-up" class="product-hero__text">
-                <p>
-                  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
-                  do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-                  Ut enim ad minim veniam, quis nostrud exercitation ullamco
-                  laboris nisi ut aliquip ex ea commodo consequat. Duis aute
-                  irure dolor in reprehenderit in voluptate velit esse cillum
-                  dolore eu fugiat nulla pariatur. Excepteur sint occaecat
-                  cupidatat non proident, sunt in culpa qui officia deserunt
-                  mollit anim id est laborum.
-                </p>
-                <p>
-                  Sed ut perspiciatis unde omnis iste natus error sit voluptatem
-                  accusantium doloremque laudantium, totam rem aperiam, eaque
-                  ipsa quae ab illo inventore veritatis et quasi architecto
-                  beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem
-                  quia voluptas sit aspernatur aut odit aut fugit, sed quia
-                  consequuntur magni dolores eos qui ratione voluptatem sequi
-                  nesciunt. Neque porro quisquam est, qui dolorem ipsum quia
-                  dolor sit amet, consectetur, adipisci velit, sed quia non
-                  numquam eius modi tempora incidunt ut labore et dolore magnam
-                  aliquam quaerat voluptatem. Ut enim ad minima veniam, quis
-                  nostrum exercitationem ullam corporis suscipit laboriosam,
-                  nisi ut aliquid ex ea commodi consequatur? Quis autem vel eum
-                  iure reprehenderit qui in ea voluptate velit esse quam nihil
-                  molestiae consequatur, vel illum qui dolorem eum fugiat quo
-                  voluptas nulla pariatur?
-                </p>
+                {{ this.product.attributes.product.description }}
               </div>
             </div>
           </div>
@@ -162,54 +159,52 @@
         <div class="artist-info__inner">
           <div class="artist-info__media">
             <div class="artist-info__image">
-              <img src="@/assets/images/product/author-img.jpeg" alt="Artist" />
+              <img
+                :src="this.product.attributes.product.authorImageUrl"
+                alt="Artist"
+              />
             </div>
             <ul class="artist-info__social">
-              <li class="artist-info__social-item">
-                <a href="#" class="artist-info__social-link social-link">
+              <li
+                class="artist-info__social-item"
+                v-if="this.product.attributes.product.authorInstagramUrl"
+              >
+                <a
+                  :href="this.product.attributes.product.authorInstagramUrl"
+                  class="artist-info__social-link social-link"
+                >
                   Instagram
                 </a>
               </li>
-              <li class="artist-info__social-item">
-                <a href="#" class="artist-info__social-link social-link">
+              <li
+                class="artist-info__social-item"
+                v-if="this.product.attributes.product.authorFacebookUrl"
+              >
+                <a
+                  :href="this.product.attributes.product.authorFacebookUrl"
+                  class="artist-info__social-link social-link"
+                >
                   Faceebook
+                </a>
+              </li>
+              <li
+                class="artist-info__social-item"
+                v-if="this.product.attributes.product.authorTwitterUrl"
+              >
+                <a
+                  :href="this.product.attributes.product.authorTwitterUrl"
+                  class="artist-info__social-link social-link"
+                >
+                  Twitter
                 </a>
               </li>
             </ul>
           </div>
           <div class="artist-info__column">
             <div class="artist-info__description">
-              <h3 class="h4">Fewocious</h3>
+              <h3 class="h4">{{ this.product.attributes.product.author }}</h3>
               <div class="artist-info__text">
-                <p>
-                  One of the first responses that Victor Langlois, aka
-                  Fewocious, ever sparked when showing his digital art to the
-                  world was brutally negative: “Your art is so ugly and that’s
-                  why you can’t do it.” That he received this feedback from his
-                  own grandmother, who had taken him in after he ran away from
-                  an abusive home at age 12, made it all the more cutting.
-                </p>
-                <p>
-                  Of course, that’s now ancient history. At the age of 18, the
-                  queer transgender artist— who has said he found in the crypto
-                  community the support he lacked from his family—is today
-                  breaking boundaries with his blazingly colorful, fiercely
-                  personal NFT work, which can command prices in the millions.
-                </p>
-                <p>
-                  Unlike many top players in the NFT space, who painstakingly
-                  preserve their anonymity behind cyphers and screen names,
-                  Fewocious has placed his own biography in the center of his
-                  practice. Most famously, his 2021 work Hello, i’m Victor
-                  (FEWOCiOUS) and This Is My Life details his harrowing
-                  experience between the ages of 14 and 18, when he struggled to
-                  find himself (and his talent) under the gaze of his
-                  disapproving family. A combination of digital pieces and
-                  tangible paintings accompanied by a series of drawings, it
-                  sold for $2.2 million at Christie’s New York this June—making
-                  him the youngest artist to sell at the auction house, as well
-                  as the first to crash its site due to high demand.
-                </p>
+                {{ this.product.attributes.product.authorBio }}
               </div>
             </div>
           </div>
@@ -220,14 +215,26 @@
 </template>
 
 <script>
+import HeaderComponent from "../components/HeaderComponent.vue";
+import MenuComponent from "../components/MenuComponent.vue";
 import dimas from "../assets/scripts/dimas";
 export default {
-props: ['productId'],
-mounted(){
-  dimas() 
-}
-}
-
+  components: {
+    HeaderComponent,
+    MenuComponent,
+  },
+  data() {
+    return {
+      product: null,
+    };
+  },
+  beforeMount() {
+    this.product = this.$route.params.product;
+  },
+  mounted() {
+    dimas();
+  },
+};
 </script>
 
 <style>

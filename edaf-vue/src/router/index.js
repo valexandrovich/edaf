@@ -68,7 +68,8 @@ const routes = [{
 
 const router = new VueRouter({
     mode: 'history',
-    base: process.env.BASE_URL,
+    // base: 'edaf2/',
+    base: process.env.VUA_APP_BASE_URL,
     routes
 })
 

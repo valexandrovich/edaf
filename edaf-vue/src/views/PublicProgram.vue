@@ -29,7 +29,7 @@
       </picture>
     </section>
 
-    <div class="section-background gradient-overlay gradient-overlay--to-top">
+    <!-- <div class="section-background gradient-overlay gradient-overlay--to-top">
       <picture class="adaptive-image">
         <source
           srcset="@/assets/images/background/pubic-program.jpeg"
@@ -48,7 +48,7 @@
                   @/assets/images/background/pubic-program.jpeg 1024w"
         />
       </picture>
-    </div>
+    </div> -->
 
     <div class="public-program">
       <div class="public-program__container container">

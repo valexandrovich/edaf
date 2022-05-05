@@ -9,8 +9,8 @@
         </h1>
 
         <div data-aos="fade-up" class="collection-hero__text">
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-          eiusmod tempor incididunt ut labore et dolore magna aliqua.
+          European Digital Art Fair is opened by the Ukrainian pavilion with
+          exhibition "The Horizon of the Future"
         </div>
       </div>
 
@@ -93,7 +93,7 @@
         </div>
       </div>
 
-Pavilion 1
+      Pavilion 1
       <div
         class="collection-content__container container"
         role="tabpanel"
@@ -101,33 +101,51 @@ Pavilion 1
         tabindex="0"
         aria-labelledby="tab-1"
       >
-        <div
+        <!-- <div
           class="collection-content__video"
           data-video-config='{"autoplay": true, "loop": true, "mute": true, "controls": false}'
           data-video-url="https://www.youtube.com/watch?v=Bc_RrCNWTyo"
-        ></div>
-
-
-
+        ></div> -->
+        <iframe
+          :src="`https://v-art-82948.web.app/galleries/edaf_ukr_pav/`"
+          width="100%"
+          height="650"
+          frameborder="0"
+        >
+        </iframe>
 
         <div class="collection-content__products grid">
-        <div @click="go('product', product)" data-aos="fade-up" class="product-card grid-cell" v-for="product in products" :key="product.id">
-           <h2 class="product-card__heading h5">
-              <a > {{product.attributes.product.name}} </a>
+          <div
+            @click="go('product', product)"
+            data-aos="fade-up"
+            class="product-card grid-cell"
+            v-for="product in products"
+            :key="product.id"
+          >
+            <h2 class="product-card__heading h5">
+              <a> {{ product.attributes.product.name }} </a>
             </h2>
             <div class="product-card__inner">
               <div class="product-card__image">
-              
                 <a class="product-card__image-wrapper">
                   <img
-                    :src=product.attributes.product.imageUrl
+                    :src="product.attributes.product.imageUrl"
                     alt="The Afro-Futurist Guide To Time Travel image"
                   />
                 </a>
               </div>
-              <div class="product-card__author">Auth{{product.attributes.product.author}}</div>
-              <div class="product-card__price h5">
-                <span class="product-card__price--token">
+              <div class="product-card__author">
+                {{ product.attributes.product.author }}
+              </div>
+              <div
+                class="product-card__price h5"
+                
+              >
+                <span class="product-card__price--token" v-if="product.attributes.product.priceEth">
+                  ETH
+                  {{ product.attributes.product.priceEth }}
+                </span>
+                 <span class="product-card__price--token" v-if="product.attributes.product.priceNear">
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
                     width="17"
@@ -140,12 +158,15 @@ Pavilion 1
                       fill="white"
                     />
                   </svg>
-                  price Near {{product.attributes.product.priceNear}}
+                  {{ product.attributes.product.priceNear }}
                 </span>
-                <span class="product-card__price--original">($ I5,630){{product.attributes.product.priceUsd}}</span>
+                <span class="product-card__price--original" v-if="product.attributes.product.priceUsd"
+                  >($ {{ product.attributes.product.priceUsd }})</span
+                >
               </div>
+         
             </div>
-        </div>
+          </div>
           <!-- <div data-aos="fade-up" class="product-card grid-cell">
             <h2 class="product-card__heading h5">
               <a href="#"> The Afro-Futurist Guide To Time Travel </a>
@@ -183,7 +204,6 @@ Pavilion 1
               </div>
             </div>
           </div> -->
- 
         </div>
       </div>
 
@@ -229,13 +249,13 @@ import FooterComponent from "../components/FooterComponent.vue";
 
 import dimas from "../assets/scripts/dimas";
 
-import ProductService from '../service/productService'
-import productService from '../service/productService';
+import ProductService from "../service/productService";
+import productService from "../service/productService";
 
 export default {
   data() {
     return {
-      products: []
+      products: [],
     };
   },
   metaInfo: {
@@ -250,23 +270,24 @@ export default {
   mounted() {
     dimas();
   },
-  created(){
-    productService.getProducts()
-    .then(resp => {
-      this.products = resp.data.data
-      // console.log(resp)
-    })
-    .catch(err => {
-      console.log(err)
-    })
+  created() {
+    productService
+      .getProducts()
+      .then((resp) => {
+        this.products = resp.data.data;
+        // console.log(resp)
+      })
+      .catch((err) => {
+        console.log(err);
+      });
   },
   methods: {
-    go(path, product){
+    go(path, product) {
       this.$router.push({
-        name: path, 
-        params: { 'product': product } 
-        })
-    }
+        name: path,
+        params: { product: product },
+      });
+    },
   },
 };
 </script>

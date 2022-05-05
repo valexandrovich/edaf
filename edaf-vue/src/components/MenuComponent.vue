@@ -115,7 +115,7 @@
               </div>
             </a>
 
-            <a @click="go('physical-fairs')" class="menu-section__container-IWT">
+            <a @click="go('physical-fairs')" class="menu-section__container-IWT" style="visibility: hidden">
               <picture class="picture menu-section__IWT-image">
                 <source
                   srcset="@/assets/images/other/menu2-mob.png"

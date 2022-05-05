@@ -12,7 +12,6 @@
           {{$t('application.title')}}
         </div>
       </div>
-
       <picture class="collection-hero__background adaptive-image">
         <source
           srcset="@/assets/images/background/application-hero.png"
@@ -50,6 +49,8 @@
       </picture>
     </div>
 
+    
+
     <section class="application">
       <div class="container-to-right container-desktop">
         <div data-aos="fade-up" class="vertical-text vertical-text--left">
@@ -64,7 +65,7 @@
             </p>
           </div>
 
-          <picture data-aos="fade-up" class="application-image adaptive-image">
+          <!-- <picture data-aos="fade-up" class="application-image adaptive-image" >
             <source
               srcset="@/assets/images/background/application-body-image.jpeg"
               media="(max-width: 768px)"
@@ -77,7 +78,7 @@
               src="@/assets/images/background/application-body-image.jpeg"
               alt="Collection background image"
             />
-          </picture>
+          </picture> -->
 
           <h2 data-aos="fade-up" class="application-heading h3">
             {{$t('application.title2')}}

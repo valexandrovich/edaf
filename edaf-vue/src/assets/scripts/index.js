@@ -1,6 +1,5 @@
 import dimas from './dimas.js';
 import sam from './sam.js';
-import swiperBundle from './swiper-bundle.min.js'
 document.addEventListener('DOMContentLoaded', function() {
         // dimas();
         // sam();
