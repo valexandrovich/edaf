@@ -3,7 +3,7 @@ import { i18n } from '../plugins/i18n'
 
 // http: //localhost:1337/api/products?filters[productType][$eq]=artistTalks
 
-const API_URL = 'http://localhost:1337/api/'
+const API_URL = process.env.VUE_APP_API_BASE + '/api/'
 
 class EventService {
     getAllEvents() {

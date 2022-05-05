@@ -233,6 +233,7 @@ export default {
   },
   mounted() {
     dimas();
+    window.scrollTo(0,0);
   },
 };
 </script>
