@@ -69,7 +69,7 @@
             >
               Pavillion 1
             </button>
-            <button
+            <!-- <button
               class="collection-content__tab h4"
               role="tab"
               aria-selected="false"
@@ -88,11 +88,12 @@
               tabindex="-1"
             >
               Pavillion 3
-            </button>
+            </button> -->
           </div>
         </div>
       </div>
 
+Pavilion 1
       <div
         class="collection-content__container container"
         role="tabpanel"
@@ -106,8 +107,46 @@
           data-video-url="https://www.youtube.com/watch?v=Bc_RrCNWTyo"
         ></div>
 
+
+
+
         <div class="collection-content__products grid">
-          <div data-aos="fade-up" class="product-card grid-cell">
+        <div @click="go('product', product)" data-aos="fade-up" class="product-card grid-cell" v-for="product in products" :key="product.id">
+           <h2 class="product-card__heading h5">
+              <a > {{product.attributes.product.name}} </a>
+            </h2>
+            <div class="product-card__inner">
+              <div class="product-card__image">
+              
+                <a class="product-card__image-wrapper">
+                  <img
+                    :src=product.attributes.product.imageUrl
+                    alt="The Afro-Futurist Guide To Time Travel image"
+                  />
+                </a>
+              </div>
+              <div class="product-card__author">Auth{{product.attributes.product.author}}</div>
+              <div class="product-card__price h5">
+                <span class="product-card__price--token">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="17"
+                    height="16"
+                    viewBox="0 0 17 16"
+                    fill="none"
+                  >
+                    <path
+                      d="M12.9907 0.817778L9.65223 5.77778C9.42138 6.11556 9.86533 6.52444 10.185 6.24L13.4702 3.37778C13.559 3.30667 13.6833 3.36 13.6833 3.48444V12.4267C13.6833 12.5511 13.5235 12.6044 13.4525 12.5156L3.50795 0.604445C3.1883 0.213333 2.72659 0 2.21161 0H1.85645C0.93303 0 0.169434 0.764444 0.169434 1.70667V14.2933C0.169434 15.2356 0.93303 16 1.87421 16C2.46022 16 3.01072 15.6978 3.33037 15.1822L6.66888 10.2222C6.89973 9.88444 6.45578 9.47556 6.13614 9.76L2.8509 12.6044C2.76211 12.6756 2.6378 12.6222 2.6378 12.4978V3.57333C2.6378 3.44889 2.79762 3.39556 2.86866 3.48444L12.8132 15.3956C13.1328 15.7867 13.6123 16 14.1095 16H14.4647C15.4058 16 16.1694 15.2356 16.1694 14.2933V1.70667C16.1694 0.764444 15.4058 0 14.4647 0C13.8609 0 13.3104 0.302222 12.9907 0.817778Z"
+                      fill="white"
+                    />
+                  </svg>
+                  price Near {{product.attributes.product.priceNear}}
+                </span>
+                <span class="product-card__price--original">($ I5,630){{product.attributes.product.priceUsd}}</span>
+              </div>
+            </div>
+        </div>
+          <!-- <div data-aos="fade-up" class="product-card grid-cell">
             <h2 class="product-card__heading h5">
               <a href="#"> The Afro-Futurist Guide To Time Travel </a>
             </h2>
@@ -143,188 +182,12 @@
                 <span class="product-card__price--original">($ I5,630)</span>
               </div>
             </div>
-          </div>
-          <div data-aos="fade-up" class="product-card grid-cell">
-            <h2 class="product-card__heading h5">
-              <a href="#"> Data Fossils </a>
-            </h2>
-            <div class="product-card__inner">
-              <div class="product-card__image">
-                <div class="product-card__badge product-card__badge--gif"></div>
-                <a href="product-card__image-wrapper">
-                  <img
-                    src="@/assets/images/product/product-image_2.jpeg"
-                    alt="The Afro-Futurist Guide To Time Travel image"
-                  />
-                </a>
-              </div>
-              <div class="product-card__author">Nirit Binyamini Ben-Meir</div>
-              <div class="product-card__price h5">
-                <span class="product-card__price--token">
-                  <svg
-                    xmlns="http://www.w3.org/2000/svg"
-                    width="17"
-                    height="16"
-                    viewBox="0 0 17 16"
-                    fill="none"
-                  >
-                    <path
-                      d="M12.9907 0.817778L9.65223 5.77778C9.42138 6.11556 9.86533 6.52444 10.185 6.24L13.4702 3.37778C13.559 3.30667 13.6833 3.36 13.6833 3.48444V12.4267C13.6833 12.5511 13.5235 12.6044 13.4525 12.5156L3.50795 0.604445C3.1883 0.213333 2.72659 0 2.21161 0H1.85645C0.93303 0 0.169434 0.764444 0.169434 1.70667V14.2933C0.169434 15.2356 0.93303 16 1.87421 16C2.46022 16 3.01072 15.6978 3.33037 15.1822L6.66888 10.2222C6.89973 9.88444 6.45578 9.47556 6.13614 9.76L2.8509 12.6044C2.76211 12.6756 2.6378 12.6222 2.6378 12.4978V3.57333C2.6378 3.44889 2.79762 3.39556 2.86866 3.48444L12.8132 15.3956C13.1328 15.7867 13.6123 16 14.1095 16H14.4647C15.4058 16 16.1694 15.2356 16.1694 14.2933V1.70667C16.1694 0.764444 15.4058 0 14.4647 0C13.8609 0 13.3104 0.302222 12.9907 0.817778Z"
-                      fill="white"
-                    />
-                  </svg>
-                  1, 500
-                </span>
-                <span class="product-card__price--original">($ I5,630)</span>
-              </div>
-            </div>
-          </div>
-          <div data-aos="fade-up" class="product-card grid-cell">
-            <h2 class="product-card__heading h5">
-              <a href="#"> Star Cities / Organised Worlds </a>
-            </h2>
-            <div class="product-card__inner">
-              <div class="product-card__image">
-                <div class="product-card__badge product-card__badge--gif"></div>
-                <a href="product-card__image-wrapper">
-                  <img
-                    src="@/assets/images/product/product-image_3.jpeg"
-                    alt="The Afro-Futurist Guide To Time Travel image"
-                  />
-                </a>
-              </div>
-              <div class="product-card__author">Priyanka Das Rajkakati</div>
-              <div class="product-card__price h5">
-                <span class="product-card__price--token">
-                  <svg
-                    xmlns="http://www.w3.org/2000/svg"
-                    width="17"
-                    height="16"
-                    viewBox="0 0 17 16"
-                    fill="none"
-                  >
-                    <path
-                      d="M12.9907 0.817778L9.65223 5.77778C9.42138 6.11556 9.86533 6.52444 10.185 6.24L13.4702 3.37778C13.559 3.30667 13.6833 3.36 13.6833 3.48444V12.4267C13.6833 12.5511 13.5235 12.6044 13.4525 12.5156L3.50795 0.604445C3.1883 0.213333 2.72659 0 2.21161 0H1.85645C0.93303 0 0.169434 0.764444 0.169434 1.70667V14.2933C0.169434 15.2356 0.93303 16 1.87421 16C2.46022 16 3.01072 15.6978 3.33037 15.1822L6.66888 10.2222C6.89973 9.88444 6.45578 9.47556 6.13614 9.76L2.8509 12.6044C2.76211 12.6756 2.6378 12.6222 2.6378 12.4978V3.57333C2.6378 3.44889 2.79762 3.39556 2.86866 3.48444L12.8132 15.3956C13.1328 15.7867 13.6123 16 14.1095 16H14.4647C15.4058 16 16.1694 15.2356 16.1694 14.2933V1.70667C16.1694 0.764444 15.4058 0 14.4647 0C13.8609 0 13.3104 0.302222 12.9907 0.817778Z"
-                      fill="white"
-                    />
-                  </svg>
-                  1, 500
-                </span>
-                <span class="product-card__price--original">($ I5,630)</span>
-              </div>
-            </div>
-          </div>
-          <div data-aos="fade-up" class="product-card grid-cell">
-            <h2 class="product-card__heading h5">
-              <a href="#"> The Afro-Futurist Guide To Time Travel </a>
-            </h2>
-            <div class="product-card__inner">
-              <div class="product-card__image">
-                <div
-                  class="product-card__badge product-card__badge--video"
-                ></div>
-                <a href="product-card__image-wrapper">
-                  <img
-                    src="@/assets/images/product/product-image.jpeg"
-                    alt="The Afro-Futurist Guide To Time Travel image"
-                  />
-                </a>
-              </div>
-              <div class="product-card__author">Chari Golovac-Smith</div>
-              <div class="product-card__price h5">
-                <span class="product-card__price--token">
-                  <svg
-                    xmlns="http://www.w3.org/2000/svg"
-                    width="17"
-                    height="16"
-                    viewBox="0 0 17 16"
-                    fill="none"
-                  >
-                    <path
-                      d="M12.9907 0.817778L9.65223 5.77778C9.42138 6.11556 9.86533 6.52444 10.185 6.24L13.4702 3.37778C13.559 3.30667 13.6833 3.36 13.6833 3.48444V12.4267C13.6833 12.5511 13.5235 12.6044 13.4525 12.5156L3.50795 0.604445C3.1883 0.213333 2.72659 0 2.21161 0H1.85645C0.93303 0 0.169434 0.764444 0.169434 1.70667V14.2933C0.169434 15.2356 0.93303 16 1.87421 16C2.46022 16 3.01072 15.6978 3.33037 15.1822L6.66888 10.2222C6.89973 9.88444 6.45578 9.47556 6.13614 9.76L2.8509 12.6044C2.76211 12.6756 2.6378 12.6222 2.6378 12.4978V3.57333C2.6378 3.44889 2.79762 3.39556 2.86866 3.48444L12.8132 15.3956C13.1328 15.7867 13.6123 16 14.1095 16H14.4647C15.4058 16 16.1694 15.2356 16.1694 14.2933V1.70667C16.1694 0.764444 15.4058 0 14.4647 0C13.8609 0 13.3104 0.302222 12.9907 0.817778Z"
-                      fill="white"
-                    />
-                  </svg>
-                  1, 500
-                </span>
-                <span class="product-card__price--original">($ I5,630)</span>
-              </div>
-            </div>
-          </div>
-          <div data-aos="fade-up" class="product-card grid-cell">
-            <h2 class="product-card__heading h5">
-              <a href="#"> Data Fossils </a>
-            </h2>
-            <div class="product-card__inner">
-              <div class="product-card__image">
-                <div class="product-card__badge product-card__badge--gif"></div>
-                <a href="product-card__image-wrapper">
-                  <img
-                    src="@/assets/images/product/product-image_2.jpeg"
-                    alt="The Afro-Futurist Guide To Time Travel image"
-                  />
-                </a>
-              </div>
-              <div class="product-card__author">Nirit Binyamini Ben-Meir</div>
-              <div class="product-card__price h5">
-                <span class="product-card__price--token">
-                  <svg
-                    xmlns="http://www.w3.org/2000/svg"
-                    width="17"
-                    height="16"
-                    viewBox="0 0 17 16"
-                    fill="none"
-                  >
-                    <path
-                      d="M12.9907 0.817778L9.65223 5.77778C9.42138 6.11556 9.86533 6.52444 10.185 6.24L13.4702 3.37778C13.559 3.30667 13.6833 3.36 13.6833 3.48444V12.4267C13.6833 12.5511 13.5235 12.6044 13.4525 12.5156L3.50795 0.604445C3.1883 0.213333 2.72659 0 2.21161 0H1.85645C0.93303 0 0.169434 0.764444 0.169434 1.70667V14.2933C0.169434 15.2356 0.93303 16 1.87421 16C2.46022 16 3.01072 15.6978 3.33037 15.1822L6.66888 10.2222C6.89973 9.88444 6.45578 9.47556 6.13614 9.76L2.8509 12.6044C2.76211 12.6756 2.6378 12.6222 2.6378 12.4978V3.57333C2.6378 3.44889 2.79762 3.39556 2.86866 3.48444L12.8132 15.3956C13.1328 15.7867 13.6123 16 14.1095 16H14.4647C15.4058 16 16.1694 15.2356 16.1694 14.2933V1.70667C16.1694 0.764444 15.4058 0 14.4647 0C13.8609 0 13.3104 0.302222 12.9907 0.817778Z"
-                      fill="white"
-                    />
-                  </svg>
-                  1, 500
-                </span>
-                <span class="product-card__price--original">($ I5,630)</span>
-              </div>
-            </div>
-          </div>
-          <div data-aos="fade-up" class="product-card grid-cell">
-            <h2 class="product-card__heading h5">
-              <a href="#"> Star Cities / Organised Worlds </a>
-            </h2>
-            <div class="product-card__inner">
-              <div class="product-card__image">
-                <div class="product-card__badge product-card__badge--gif"></div>
-                <a href="product-card__image-wrapper">
-                  <img
-                    src="@/assets/images/product/product-image_3.jpeg"
-                    alt="The Afro-Futurist Guide To Time Travel image"
-                  />
-                </a>
-              </div>
-              <div class="product-card__author">Priyanka Das Rajkakati</div>
-              <div class="product-card__price h5">
-                <span class="product-card__price--token">
-                  <svg
-                    xmlns="http://www.w3.org/2000/svg"
-                    width="17"
-                    height="16"
-                    viewBox="0 0 17 16"
-                    fill="none"
-                  >
-                    <path
-                      d="M12.9907 0.817778L9.65223 5.77778C9.42138 6.11556 9.86533 6.52444 10.185 6.24L13.4702 3.37778C13.559 3.30667 13.6833 3.36 13.6833 3.48444V12.4267C13.6833 12.5511 13.5235 12.6044 13.4525 12.5156L3.50795 0.604445C3.1883 0.213333 2.72659 0 2.21161 0H1.85645C0.93303 0 0.169434 0.764444 0.169434 1.70667V14.2933C0.169434 15.2356 0.93303 16 1.87421 16C2.46022 16 3.01072 15.6978 3.33037 15.1822L6.66888 10.2222C6.89973 9.88444 6.45578 9.47556 6.13614 9.76L2.8509 12.6044C2.76211 12.6756 2.6378 12.6222 2.6378 12.4978V3.57333C2.6378 3.44889 2.79762 3.39556 2.86866 3.48444L12.8132 15.3956C13.1328 15.7867 13.6123 16 14.1095 16H14.4647C15.4058 16 16.1694 15.2356 16.1694 14.2933V1.70667C16.1694 0.764444 15.4058 0 14.4647 0C13.8609 0 13.3104 0.302222 12.9907 0.817778Z"
-                      fill="white"
-                    />
-                  </svg>
-                  1, 500
-                </span>
-                <span class="product-card__price--original">($ I5,630)</span>
-              </div>
-            </div>
-          </div>
+          </div> -->
+ 
         </div>
       </div>
 
-      <div
+      <!-- <div
         class="collection-content__container container"
         role="tabpanel"
         id="tab-content-2"
@@ -350,7 +213,7 @@
         hidden
       >
         <div class="collection-content__products grid"></div>
-      </div>
+      </div> -->
     </section>
 
     <partner-form></partner-form>
@@ -366,9 +229,14 @@ import FooterComponent from "../components/FooterComponent.vue";
 
 import dimas from "../assets/scripts/dimas";
 
+import ProductService from '../service/productService'
+import productService from '../service/productService';
+
 export default {
   data() {
-    return {};
+    return {
+      products: []
+    };
   },
   metaInfo: {
     title: "FIRST PAN-EUROPEAN DIGITAL ART FAIR",
@@ -382,7 +250,24 @@ export default {
   mounted() {
     dimas();
   },
-  methods: {},
+  created(){
+    productService.getProducts()
+    .then(resp => {
+      this.products = resp.data.data
+      // console.log(resp)
+    })
+    .catch(err => {
+      console.log(err)
+    })
+  },
+  methods: {
+    go(path, product){
+      this.$router.push({
+        name: path, 
+        params: { 'product': product } 
+        })
+    }
+  },
 };
 </script>
 
