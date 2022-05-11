@@ -10,6 +10,11 @@
 import { loadMessages } from "./plugins/i18n";
 
 export default {
+  data(){
+    return {
+      isProductsLoaded: false
+    }
+  },
   metaInfo: {
     titleTemplate: "EDAF - %s",
     htmlAttrs: {
@@ -62,7 +67,7 @@ export default {
       },
     ],
   },
-  mounted() {
+  async mounted() {
     loadMessages();
   },
 

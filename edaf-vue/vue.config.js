@@ -2,8 +2,11 @@ const { defineConfig } = require('@vue/cli-service')
 module.exports = defineConfig({
     // baseUrl: "edaf2/",
     transpileDependencies: true,
-    publicPath: './',
+    publicPath: '/',
     devServer: {
+        historyApiFallback: {
+            index: '/'
+        },
         proxy: {
             '^/api': {
                 target: 'https://edaf.sbs/',

@@ -1,8 +1,8 @@
 <template>
-  <div>
+  <div v-if="product">
     <header-component></header-component>
     <menu-component></menu-component>
-    <section class="product-page">
+    <section class="product-page" >
       <div class="product-page__hero product-hero">
         <div class="product-hero__container">
           <div class="product-hero__header">
@@ -99,9 +99,16 @@
                   </option>
                 </select>
 
-                <button class="product-hero__btn btn" disabled>
-                  <span class="show-on-mobile">Coming soon</span>
-                  <span class="hide-on-mobile">Coming soon </span>
+                <button class="product-hero__btn btn" type="button">
+                  
+                  <div v-if="product.attributes.product.buyUrl">
+                    <span class="show-on-mobile" @click="buy(product.attributes.product.buyUrl)"> Buy</span>
+                  <span class="hide-on-mobile" @click="buy(product.attributes.product.buyUrl)"> Buy </span>
+                  </div>
+                  <div v-else>
+                    <span class="show-on-mobile" > Coming soon </span>
+                  <span class="hide-on-mobile" > Coming soon </span>
+                  </div>
                   <span class="btn-arrows">
                     <span></span>
                     <span></span>
@@ -218,6 +225,7 @@
 import HeaderComponent from "../components/HeaderComponent.vue";
 import MenuComponent from "../components/MenuComponent.vue";
 import dimas from "../assets/scripts/dimas";
+import ProductService from '../service/productService'
 export default {
   components: {
     HeaderComponent,
@@ -225,16 +233,23 @@ export default {
   },
   data() {
     return {
-      product: null,
+      product: null
     };
   },
-  beforeMount() {
-    this.product = this.$route.params.product;
+  async beforeMount() {
+    const p= await ProductService.getProductById(this.$route.params.id)
+    this.product = p.data.data
   },
   mounted() {
     dimas();
-    window.scrollTo(0,0);
+    window.scrollTo(0, 0);
   },
+  methods: {
+    buy(url){
+      console.log(url);
+       window.open(url, '_blank').focus();
+    }
+  }
 };
 </script>
 

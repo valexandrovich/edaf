@@ -10,26 +10,7 @@
 
         <h2 class="contacts__heading h2">{{$t('contacts.contacts')}}</h2>
 
-        <picture
-          class="
-            contacts__background
-            adaptive-image
-            gradient-overlay gradient-overlay--to-top
-          "
-        >
-          <source
-            srcset="@/assets/images/background/contacts-bg-mob.png"
-            media="(max-width: 768px)"
-          />
-          <source
-            srcset="@/assets/images/background/contacts-bg-desk.png"
-            media="(min-width: 767px)"
-          />
-          <img
-            src="@/assets/images/background/contacts-bg-desk.png"
-            alt="Home page background image"
-          />
-        </picture>
+  
 
         <div class="contacts__body">
           <div class="contacts__body-image picture">
@@ -39,9 +20,9 @@
           <div class="contacts__body-info-container">
             <div class="contacts__body-info-item info-item">
               <div class="info-item__subitem">
-                <h4 class="info-item__subitem-title h4">{{$t('contacts.edaf')}}</h4>
+                <h4 class="info-item__subitem-title h4" >{{$t('contacts.edaf')}}</h4>
 
-                <div class="info-item__subitem-logo logo">
+                <div class="info-item__subitem-logo logo" >
                   <img
                     src="@/assets/images/logo/header-logo.svg"
                     alt="Logotype"
@@ -50,7 +31,7 @@
               </div>
 
               <div class="info-item__subitem">
-                <ul class="info-item__subitem-link-list">
+                <ul class="info-item__subitem-link-list" >
                   <!-- <li>
                     <a href="#" class="info-item__subitem-link social-link"
                       >Twitter</a
@@ -65,6 +46,7 @@
                     <a
                       href="mailto:info@edaf.eu.com"
                       class="info-item__subitem-link social-link"
+                      
                       >info@edaf.eu.com</a
                     >
                   </li>
@@ -73,6 +55,7 @@
                 <ul class="info-item__subitem-link-list">
                   <li>
                     <a href="https://www.facebook.com/V.Art.digital/" class="info-item__subitem-link social-link"
+                    
                       >Instagram</a
                     >
                   </li>
@@ -87,26 +70,29 @@
 
             <div class="contacts__body-info-item info-item">
               <div class="info-item__subitem">
-                <h4 class="info-item__subitem-title h4">v-art</h4>
+                <h4 class="info-item__subitem-title h4" >v-art</h4>
 
-                <div class="info-item__subitem-logo logo">
+                <div class="info-item__subitem-logo logo" >
                   <img
                     class="vart-logo"
+                    
                     src="@/assets/images/logo/v-art-no-color.svg"
                     alt="Logotype"
                   />
                 </div>
               </div>
 
-              <div class="info-item__subitem">
+              <div class="info-item__subitem" >
                 <ul class="info-item__subitem-link-list">
                   <li>
                     <a href="https://twitter.com/V_Art_Digital" class="info-item__subitem-link social-link"
+                    
                       >Twitter</a
                     >
                   </li>
                   <li>
                     <a href="https://www.linkedin.com/company/42436332/" class="info-item__subitem-link social-link"
+                    
                       >Linkedin</a
                     >
                   </li>
@@ -114,7 +100,9 @@
 
                 <ul class="info-item__subitem-link-list">
                   <li>
-                    <a href="https://instagram.com/v.art.digital?igshid=twe6mh6mrdcz" class="info-item__subitem-link social-link"
+                    <a href="https://instagram.com/v.art.digital?igshid=twe6mh6mrdcz"
+                    
+                     class="info-item__subitem-link social-link"
                       >Instagram</a
                     >
                   </li>

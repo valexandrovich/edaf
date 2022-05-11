@@ -116,12 +116,13 @@
 
         <div class="collection-content__products grid">
           <div
-            @click="go('product', product)"
+            @click="go(product.id)"
             data-aos="fade-up"
             class="product-card grid-cell"
             v-for="product in products"
             :key="product.id"
           >
+          {{product.id}}
             <h2 class="product-card__heading h5">
               <a> {{ product.attributes.product.name }} </a>
             </h2>
@@ -249,8 +250,8 @@ import FooterComponent from "../components/FooterComponent.vue";
 
 import dimas from "../assets/scripts/dimas";
 
-import ProductService from "../service/productService";
-import productService from "../service/productService";
+// import ProductService from "../service/productService";
+// import productService from "../service/productService";
 
 export default {
   data() {
@@ -270,24 +271,14 @@ export default {
   mounted() {
     dimas();
   },
-  created() {
-    productService
-      .getProducts()
-      .then((resp) => {
-        this.products = resp.data.data;
-        // console.log(resp)
-      })
-      .catch((err) => {
-        console.log(err);
-      });
+  async created() {
+    await this.$store.dispatch("products/LOAD_PRODUCTS")
+    this.products =  this.$store.getters['products/GET_ALL_PRODUCTS']
   },
   methods: {
-    go(path, product) {
-      this.$router.push({
-        name: path,
-        params: { product: product },
-      });
-    },
+    go(id){
+      this.$router.push({name: 'product', params: {id: id}})
+    }
   },
 };
 </script>

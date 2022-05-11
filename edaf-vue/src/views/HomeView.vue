@@ -69,6 +69,7 @@
             {{ $t("home.head_4") }}
           </h1>
 
+<button @click="$router.push('/test/1')">PUSH TEST</button>
           <a  class="index-hero__btn btn btn--transparent" @click="go('fairs')">
             {{ $t("home.goToTheFairs") }}
             <span class="btn-arrows">

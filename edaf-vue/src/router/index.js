@@ -10,6 +10,7 @@ import Fairs from '../views/Fairs.vue'
 import Events from '../views/Events.vue'
 import ProductCard from '../views/ProductCard.vue'
 import Event from '../views/Event.vue'
+import Test from '../views/Test.vue'
 
 Vue.use(VueRouter)
 
@@ -59,9 +60,16 @@ const routes = [{
         component: Event
     },
     {
-        path: '/product',
+        path: '/product/:id',
         name: 'product',
         component: ProductCard
+    },
+    {
+        path: '/test/:id',
+        name: 'test',
+        component: Test,
+        props: true
+
     }
 
 ]
