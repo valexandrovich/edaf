@@ -69,7 +69,6 @@
             {{ $t("home.head_4") }}
           </h1>
 
-<button @click="$router.push('/test/1')">PUSH TEST</button>
           <a  class="index-hero__btn btn btn--transparent" @click="go('fairs')">
             {{ $t("home.goToTheFairs") }}
             <span class="btn-arrows">
@@ -408,7 +407,9 @@
 
             <div class="index-partners__item-content">
               <h3 class="index-partners__item-heading h4">
+                <a href="https://www.g1expo.com/v3/dslcollection/" class="index-partners__link">
                 {{ $t("home.part2name") }}
+                </a>
               </h3>
 
               <p class="index-partners__item-body">
@@ -441,7 +442,10 @@
 
             <div class="index-partners__item-content">
               <h3 class="index-partners__item-heading h4">
+                <a href="https://www.straightfire.space/" class="index-partners__link">
+                
                 {{ $t("home.part3name") }}
+                </a>
               </h3>
 
               <p class="index-partners__item-body">
@@ -473,7 +477,10 @@
 
             <div class="index-partners__item-content">
               <h3 class="index-partners__item-heading h4">
+                
+                <a href="https://harddiskmuseum.com/" class="index-partners__link">
                 {{ $t("home.part4name") }}
+                </a>
               </h3>
 
               <p class="index-partners__item-body">
@@ -506,7 +513,10 @@
 
             <div class="index-partners__item-content">
               <h3 class="index-partners__item-heading h4">
+                <a href="https://www.electricartefacts.art/" class="index-partners__link">
+                
                 {{ $t("home.part5name") }}
+                </a>
               </h3>
 
               <p class="index-partners__item-body">
@@ -541,7 +551,10 @@
 
             <div class="index-partners__item-content">
               <h3 class="index-partners__item-heading h4">
+                <a href="http://m17.kiev.ua/" class="index-partners__link">
+                
                 {{ $t("home.part7name") }}
+                </a>
               </h3>
 
               <p class="index-partners__item-body">
@@ -556,6 +569,43 @@
                 >
                 <a
                   href="https://www.facebook.com/m17art.center"
+                  class="index-partners__item-facebook social-link"
+                  >{{ $t("home.facebook") }}</a
+                >
+              </div>
+            </div>
+          </div>
+
+             <div data-aos="fade-up" class="index-partners__item">
+            <div class="index-partners__logo-container">
+              <img
+                class="index-partners__logo"
+                src="@/assets/images/logo/image 8.svg"
+                alt="logo"
+                width="80px"
+              />
+            </div>
+
+            <div class="index-partners__item-content">
+              <h3 class="index-partners__item-heading h4">
+                  <a href="https://breezyart.io" class="index-partners__link">
+                    {{ $t("home.part8name") }}
+                  </a>
+                  
+              </h3>
+
+              <p class="index-partners__item-body">
+                {{ $t("home.part8about1") }}
+              </p>
+
+              <div class="index-partners__item-links">
+                <a
+                  href="https://www.instagram.com/breezyart.io/"
+                  class="index-partners__item-instagram social-link"
+                  >{{ $t("home.instagram") }}</a
+                >
+                <a
+                  href="https://www.facebook.com/breezyartgallery"
                   class="index-partners__item-facebook social-link"
                   >{{ $t("home.facebook") }}</a
                 >

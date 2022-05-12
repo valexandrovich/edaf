@@ -6,29 +6,29 @@
       <div class="product-page__hero product-hero">
         <div class="product-hero__container">
           <div class="product-hero__header">
-            <div class="product-hero__gallery product__swiper">
+            <div class="product-hero__gallery product__swiper" >
               <div class="swiper-wrapper">
-                <div class="product-hero__slide swiper-slide">
+                <div class="product-hero__slide swiper-slide" >
                   <img
                     :src="this.product.attributes.product.imageUrl"
                     alt="Data Fossils"
                     class="product-hero__image"
                   />
                 </div>
-                <div class="product-hero__slide swiper-slide">
+                <!-- <div class="product-hero__slide swiper-slide">
                   <img
                     src="@/assets/images/product/pdp-image_1.jpeg"
                     alt="Data Fossils"
                     class="product-hero__image"
                   />
-                </div>
+                </div> -->
               </div>
               <div class="swiper-pagination"></div>
             </div>
 
             <div class="product-hero__info">
               <div class="product-hero__wrapper">
-                <h1 data-aos="fade-up" class="product-hero__heading h3">
+                <h1 data-aos="fade-up" class="product-hero__heading h4" style="max-width: 800px;">
                   {{ this.product.attributes.product.name }}
                 </h1>
                 <div class="product-hero__author">
@@ -99,11 +99,11 @@
                   </option>
                 </select>
 
-                <button class="product-hero__btn btn" type="button">
+                <button class="product-hero__btn btn" type="button" @click="buy(product.attributes.product.buyUrl)">
                   
                   <div v-if="product.attributes.product.buyUrl">
-                    <span class="show-on-mobile" @click="buy(product.attributes.product.buyUrl)"> Buy</span>
-                  <span class="hide-on-mobile" @click="buy(product.attributes.product.buyUrl)"> Buy </span>
+                    <span class="show-on-mobile" > Buy</span>
+                  <span class="hide-on-mobile" > Buy </span>
                   </div>
                   <div v-else>
                     <span class="show-on-mobile" > Coming soon </span>

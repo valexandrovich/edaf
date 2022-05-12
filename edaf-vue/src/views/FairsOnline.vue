@@ -110,6 +110,7 @@
           :src="`https://v-art-82948.web.app/galleries/edaf_ukr_pav/`"
           width="100%"
           height="650"
+          allowfullscreen
           frameborder="0"
         >
         </iframe>
@@ -122,7 +123,6 @@
             v-for="product in products"
             :key="product.id"
           >
-          {{product.id}}
             <h2 class="product-card__heading h5">
               <a> {{ product.attributes.product.name }} </a>
             </h2>
