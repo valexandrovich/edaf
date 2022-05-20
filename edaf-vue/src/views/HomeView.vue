@@ -69,7 +69,7 @@
             {{ $t("home.head_4") }}
           </h1>
 
-          <a  class="index-hero__btn btn btn--transparent" @click="go('fairs')">
+          <a  class="index-hero__btn btn btn--transparent" @click="go('fairs-online')">
             {{ $t("home.goToTheFairs") }}
             <span class="btn-arrows">
               <span></span>
@@ -132,6 +132,12 @@
                 class="index-hero__footer-logo"
                 src="@/assets/images/logo/m17.svg"
                 alt="logo"
+              />
+               <img
+                class="index-hero__footer-logo"
+                src="@/assets/images/logo/image 8.svg"
+                alt="logo"
+                width="80px"
               />
             </div>
           </div>

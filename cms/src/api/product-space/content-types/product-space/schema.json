@@ -1,0 +1,27 @@
+{
+  "kind": "collectionType",
+  "collectionName": "product_spaces",
+  "info": {
+    "singularName": "product-space",
+    "pluralName": "product-spaces",
+    "displayName": "Product-Space"
+  },
+  "options": {
+    "draftAndPublish": false
+  },
+  "pluginOptions": {
+    "i18n": {
+      "localized": true
+    }
+  },
+  "attributes": {
+    "product": {
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      },
+      "type": "json"
+    }
+  }
+}

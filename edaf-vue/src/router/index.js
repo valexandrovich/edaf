@@ -9,6 +9,7 @@ import PhysicalFairs from '../views/PhysicalFairs.vue'
 import Fairs from '../views/Fairs.vue'
 import Events from '../views/Events.vue'
 import ProductCard from '../views/ProductCard.vue'
+import ProductSpacesCard from '../views/ProductSpacesCard.vue'
 import Event from '../views/Event.vue'
 import Test from '../views/Test.vue'
 
@@ -63,6 +64,11 @@ const routes = [{
         path: '/product/:id',
         name: 'product',
         component: ProductCard
+    },
+    {
+        path: '/product-spaces/:id',
+        name: 'product-spaces',
+        component: ProductSpacesCard
     },
     {
         path: '/test/:id',
