@@ -9,8 +9,14 @@
         </h1>
 
         <div data-aos="fade-up" class="collection-hero__text">
-          European Digital Art Fair is opened by the Ukrainian pavilion with
-          exhibition "The Horizon of the Future"
+          <p style="text-align: initial">
+            ArtSpaceship pavilion is opened!
+            <br />
+            Fasten your seatbelt. And remember, if you came here for solutions,
+            you are in the wrong place. Art raises questions; art doesn’t
+            answer. But one thing I can promise you: you will enjoy your flight.
+          </p>
+          <p style="text-align: end">Curated by Eleonora Brizi</p>
         </div>
       </div>
 
