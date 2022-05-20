@@ -1,0 +1,21 @@
+{
+  "kind": "collectionType",
+  "collectionName": "pppps",
+  "info": {
+    "singularName": "pppp",
+    "pluralName": "pppps",
+    "displayName": "pppp"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "name": {
+      "type": "string"
+    },
+    "price": {
+      "type": "integer"
+    }
+  }
+}
