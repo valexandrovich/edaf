@@ -1,6 +1,5 @@
 <template>
   <div id="app">
-    
     <router-view />
   </div>
 </template>
@@ -8,8 +7,12 @@
 <script>
     
 import { loadMessages } from "./plugins/i18n";
-
+// import RouterView from './views/RouterView.vue'
 export default {
+  // components: [
+    // RouterView
+  // ],
+
   data(){
     return {
       isProductsLoaded: false
