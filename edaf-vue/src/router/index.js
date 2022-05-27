@@ -20,71 +20,12 @@ Vue.use(VueRouter)
 
 const routes = [
 
-    /*
-        {
-            path: '/',
-            name: 'home',
-            component: HomeView
-        },
-        {
-            path: '/application',
-            name: 'application',
-            component: ApplicationView
-        },
-        {
-            path: '/public-program',
-            name: 'public-program',
-            component: PublicProgram
-        },
-        {
-            path: '/contacts',
-            name: 'contacts',
-            component: ContactsView
-        },
-        {
-            path: '/fairs',
-            name: 'fairs',
-            component: Fairs
-        },
-        {
-            path: '/fairs-online',
-            name: 'fairs-online',
-            component: FairsOnline
-        },
-        {
-            path: '/physical-fairs',
-            name: 'physical-fairs',
-            component: PhysicalFairs
-        },
-        {
-            path: '/events',
-            name: 'events',
-            component: Events
-        },
-        {
-            path: '/event',
-            name: 'event',
-            component: Event
-        },
-        {
-            path: '/product/:id',
-            name: 'product',
-            component: ProductCard
-        },
-        {
-            path: '/product-spaces/:id',
-            name: 'product-spaces',
-            component: ProductSpacesCard
-        },
-        {
-            path: '/test/:id',
-            name: 'test',
-            component: Test,
-            props: true
-    
-        }
-    
-        */
+   
+       {
+        path: '/',
+        redirect: '/en'
+       },
+
     {
         path: '/:locale',
         component: RouterView,
