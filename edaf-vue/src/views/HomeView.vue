@@ -69,7 +69,7 @@
             {{ $t("home.head_4") }}
           </h1>
 
-          <a  class="index-hero__btn btn btn--transparent" @click="go('fairs-online')">
+          <a  class="index-hero__btn btn btn--transparent" @click="go('fairs')">
             {{ $t("home.goToTheFairs") }}
             <span class="btn-arrows">
               <span></span>
@@ -662,7 +662,8 @@ export default {
       console.log(this.$store.getters['events/TEST']('sometext'))
     },
     go(path) {
-      this.$router.push(path);
+      // this.$router.push(path);
+       this.$router.push({ name: path }).catch((err) => {});
     },
   },
 };
