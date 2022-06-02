@@ -10,13 +10,13 @@
 
         <div data-aos="fade-up" class="collection-hero__text">
           <p style="text-align: initial">
-            ArtSpaceship pavilion is opened!
-            <br />
-            Fasten your seatbelt. And remember, if you came here for solutions,
-            you are in the wrong place. Art raises questions; art doesn’t
-            answer. But one thing I can promise you: you will enjoy your flight.
+            <!-- ArtSpaceship pavilion is opened!
+            <br /> -->
+            It is the contrast between glowing light and impenetrable darkness that gives the other meaning, one without the other is nothing. 
+             <!-- <br /> -->
+            <!-- And we are eager to show it! -->
           </p>
-          <p style="text-align: end">Curated by Eleonora Brizi</p>
+          <p style="text-align: end">We invite you to gaze upon some of the most captivating artwork the digital world has to offer in the Neon Night Pavillion.</p>
         </div>
       </div>
 
@@ -94,6 +94,16 @@
               tabindex="-1"
             >
               Pavillion 3
+            </button>
+              <button
+              class="collection-content__tab h4"
+              role="tab"
+              aria-selected="false"
+              aria-controls="tab-content-4"
+              id="tab-4"
+              tabindex="-1"
+            >
+              Pavillion 4
             </button>
           </div>
         </div>
@@ -312,6 +322,17 @@
             </div>
           </div>
         </div>
+      </div>
+      <div class="collection-content__container container" role="tabpanel" id="tab-content-4" tabindex="0" aria-labelledby="tab-4" hidden>
+   
+      <iframe
+          :src="`https://v-art-82948.web.app/galleries/edaf_pavilion_4`"
+          width="100%"
+          height="650"
+          allowfullscreen
+          frameborder="0"
+        >
+        </iframe>
       </div>
     
 
