@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div style="height:100%">
     <header-component></header-component>
     <menu-component></menu-component>
     <section class="collection-hero">
@@ -10,13 +10,13 @@
 
         <div data-aos="fade-up" class="collection-hero__text">
           <p style="text-align: initial">
-            ArtSpaceship pavilion is opened!
-            <br />
-            Fasten your seatbelt. And remember, if you came here for solutions,
-            you are in the wrong place. Art raises questions; art doesn’t
-            answer. But one thing I can promise you: you will enjoy your flight.
+            <!-- ArtSpaceship pavilion is opened!
+            <br /> -->
+            It is the contrast between glowing light and impenetrable darkness that gives the other meaning, one without the other is nothing. 
+             <!-- <br /> -->
+            <!-- And we are eager to show it! -->
           </p>
-          <p style="text-align: end">Curated by Eleonora Brizi</p>
+          <p style="text-align: end">We invite you to gaze upon some of the most captivating artwork the digital world has to offer in the Neon Night Pavillion.</p>
         </div>
       </div>
 
@@ -85,7 +85,11 @@
             >
               Pavillion 2
             </button>
+<<<<<<< HEAD
              <button
+=======
+              <button
+>>>>>>> 23101e0518f7d290e1a37dd5bed5b7cbdb5cfdf1
               class="collection-content__tab h4"
               role="tab"
               aria-selected="false"
@@ -95,6 +99,19 @@
             >
               Pavillion 3
             </button>
+<<<<<<< HEAD
+=======
+              <button
+              class="collection-content__tab h4"
+              role="tab"
+              aria-selected="false"
+              aria-controls="tab-content-4"
+              id="tab-4"
+              tabindex="-1"
+            >
+              Pavillion 4
+            </button>
+>>>>>>> 23101e0518f7d290e1a37dd5bed5b7cbdb5cfdf1
           </div>
         </div>
       </div>
@@ -242,6 +259,87 @@
             </div>
           </div>
         </div>
+      </div>
+
+      <div class="collection-content__container container" role="tabpanel" id="tab-content-3" tabindex="0" aria-labelledby="tab-3" hidden>
+   
+      <iframe
+          :src="`https://v-art-82948.web.app/galleries/edaf_partnership_pav/`"
+          width="100%"
+          height="650"
+          allowfullscreen
+          frameborder="0"
+        >
+        </iframe>
+        <div class="collection-content__products grid">
+          <div
+            @click="goPartners(product.id)"
+            data-aos="fade-up"
+            class="product-card grid-cell"
+            v-for="product in productsPartners"
+            :key="product.id"
+          >
+            <h2 class="product-card__heading h5">
+              <a> {{ product.attributes.product.name }} </a>
+            </h2>
+            <div class="product-card__inner">
+              <div class="product-card__image">
+                <a class="product-card__image-wrapper">
+                  <img
+                    :src="product.attributes.product.imageUrl"
+                    alt="The Afro-Futurist Guide To Time Travel image"
+                  />
+                </a>
+              </div>
+              <div class="product-card__author">
+                {{ product.attributes.product.author }}
+              </div>
+              <div class="product-card__price h5">
+                <span
+                  class="product-card__price--token"
+                  v-if="product.attributes.product.priceEth"
+                >
+                  ETH
+                  {{ product.attributes.product.priceEth }}
+                </span>
+                <span
+                  class="product-card__price--token"
+                  v-if="product.attributes.product.priceNear"
+                >
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="17"
+                    height="16"
+                    viewBox="0 0 17 16"
+                    fill="none"
+                  >
+                    <path
+                      d="M12.9907 0.817778L9.65223 5.77778C9.42138 6.11556 9.86533 6.52444 10.185 6.24L13.4702 3.37778C13.559 3.30667 13.6833 3.36 13.6833 3.48444V12.4267C13.6833 12.5511 13.5235 12.6044 13.4525 12.5156L3.50795 0.604445C3.1883 0.213333 2.72659 0 2.21161 0H1.85645C0.93303 0 0.169434 0.764444 0.169434 1.70667V14.2933C0.169434 15.2356 0.93303 16 1.87421 16C2.46022 16 3.01072 15.6978 3.33037 15.1822L6.66888 10.2222C6.89973 9.88444 6.45578 9.47556 6.13614 9.76L2.8509 12.6044C2.76211 12.6756 2.6378 12.6222 2.6378 12.4978V3.57333C2.6378 3.44889 2.79762 3.39556 2.86866 3.48444L12.8132 15.3956C13.1328 15.7867 13.6123 16 14.1095 16H14.4647C15.4058 16 16.1694 15.2356 16.1694 14.2933V1.70667C16.1694 0.764444 15.4058 0 14.4647 0C13.8609 0 13.3104 0.302222 12.9907 0.817778Z"
+                      fill="white"
+                    />
+                  </svg>
+                  {{ product.attributes.product.priceNear }}
+                </span>
+                <span
+                  class="product-card__price--original"
+                  v-if="product.attributes.product.priceUsd"
+                  >($ {{ product.attributes.product.priceUsd }})</span
+                >
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="collection-content__container container" role="tabpanel" id="tab-content-4" tabindex="0" aria-labelledby="tab-4" hidden>
+   
+      <iframe
+          :src="`https://v-art-82948.web.app/galleries/edaf_pavilion_4`"
+          width="100%"
+          height="650"
+          allowfullscreen
+          frameborder="0"
+        >
+        </iframe>
       </div>
     
  <div class="collection-content__container container" role="tabpanel" id="tab-content-3" tabindex="0" aria-labelledby="tab-3" hidden>
@@ -405,7 +503,8 @@ export default {
   data() {
     return {
       products: [],
-      productsSpaces: []
+      productsSpaces: [],
+      productsPartners: []
     };
   },
   metaInfo: {
@@ -427,6 +526,9 @@ export default {
   await this.$store.dispatch("products/LOAD_PRODUCT_SPACES");
     this.productsSpaces = this.$store.getters["products/GET_ALL_PRODUCT_SPACES"];
 
+     await this.$store.dispatch("products/LOAD_PRODUCT_PARTNERS");
+    this.productsPartners = this.$store.getters["products/GET_ALL_PRODUCT_PARTNERS"];
+
   },
   methods: {
     go(id) {
@@ -434,6 +536,9 @@ export default {
     },
      goSpaces(id) {
       this.$router.push({ name: "product-spaces", params: { id: id } });
+    },
+      goPartners(id) {
+      this.$router.push({ name: "product-partners", params: { id: id } });
     },
   },
 };

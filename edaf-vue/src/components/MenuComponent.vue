@@ -221,6 +221,10 @@ export default {
     setLocale(locale) {
       localStorage.setItem("lang", locale);
       this.$i18n.locale = locale;
+      let params = this.$route.params
+      params.locale = locale
+      this.$router.push({name: this.$route.name, params : params})
+  // console.log(this.$route.p);
     },
     go(path) {
       this.$router.push({ name: path }).catch((err) => {});

@@ -662,7 +662,8 @@ export default {
       console.log(this.$store.getters['events/TEST']('sometext'))
     },
     go(path) {
-      this.$router.push(path);
+      // this.$router.push(path);
+       this.$router.push({ name: path }).catch((err) => {});
     },
   },
 };
