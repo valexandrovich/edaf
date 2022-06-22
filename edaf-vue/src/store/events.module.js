@@ -26,6 +26,7 @@ export const events = {
         },
         getAllEvents({ commit }) {
             eventService.getAllEvents().then(resp => {
+                // console.log(resp);
                 commit('setEvents', resp.data.data)
 
             })

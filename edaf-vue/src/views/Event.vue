@@ -1,10 +1,9 @@
 <template>
-  <div >
+  <div>
     <header-component></header-component>
     <menu-component></menu-component>
 
-
-    <section class="hero-video" v-if="event">
+    <section class="hero-video" >
       <picture class="hero-video__background adaptive-image">
         <source
           srcset="@/assets/images/background/event-hero-bg-mob.png"
@@ -21,21 +20,22 @@
       </picture>
 
       <div class="hero-video__container container-desktop">
-        <h3 data-aos="fade-up" class="hero-video__heading h3">
-          {{ event.attributes.name }}
+        <h3 data-aos="fade-up" class="hero-video__heading h3"  v-if="event">
+           {{event.attributes.name }}
         </h3>
-        <div data-aos="fade-up" class="hero-video__video container collection-content__video"
-         data-video-config='{"autoplay": true, "loop": true, "mute": true, "controls": false}'
-         :data-video-url="event.attributes.videoUrl"
-         v-if="event.attributes.videoUrl"
-         ></div>
-  
+        <div
+        id="videoDiv"
+          data-aos="fade-up"
+          class="hero-video__video container collection-content__video"
+          data-video-config='{"autoplay": true, "loop": true, "mute": true, "controls": false}'
+          data-video-url='https://www.youtube.com/watch?v=AjWfY7SnMBI'
+          
+          
+        ></div>
       </div>
     </section>
 
     <section class="about-event" v-if="event">
-
-
       <div class="about-event__container container-desktop">
         <div class="about-event__block">
           <h3 data-aos="fade-up" class="about-event__heading h3">speaker</h3>
@@ -48,12 +48,18 @@
                 :key="speaker.id"
                 v-for="speaker in speakers"
               >
-                <div class="about-event__speaker-photo picture" v-if="speaker.attributes.img.data">
-                  <img 
-                  :src=  "'http://localhost:1337' + speaker.attributes.img.data.attributes.url"
-                  alt="Speaker" />
+                <div
+                  class="about-event__speaker-photo picture"
+                  v-if="speaker.attributes.img.data"
+                >
+                  <img
+                    :src="
+                      'http://localhost:1337' +
+                      speaker.attributes.img.data.attributes.url
+                    "
+                    alt="Speaker"
+                  />
                 </div>
-
 
                 <div class="about-event__speaker-container">
                   <div class="about-event__speaker-about">
@@ -67,8 +73,14 @@
                   </div>
 
                   <ul class="about-event__social-links">
-                    <li class="about-event__social-link" v-if="speaker.attributes.instagramUrl">
-                      <a :href="speaker.attributes.instagramUrl" class="social-link-secondary">
+                    <li
+                      class="about-event__social-link"
+                      v-if="speaker.attributes.instagramUrl"
+                    >
+                      <a
+                        :href="speaker.attributes.instagramUrl"
+                        class="social-link-secondary"
+                      >
                         <svg
                           xmlns="http://www.w3.org/2000/svg"
                           aria-hidden="true"
@@ -86,8 +98,14 @@
                       </a>
                     </li>
 
-                    <li class="about-event__social-link" v-if="speaker.attributes.facebookUrl">
-                      <a :href="speaker.attributes.facebookUrl" class="social-link-secondary">
+                    <li
+                      class="about-event__social-link"
+                      v-if="speaker.attributes.facebookUrl"
+                    >
+                      <a
+                        :href="speaker.attributes.facebookUrl"
+                        class="social-link-secondary"
+                      >
                         <svg
                           xmlns="http://www.w3.org/2000/svg"
                           aria-hidden="true"
@@ -105,8 +123,14 @@
                       </a>
                     </li>
 
-                    <li class="about-event__social-link" v-if="speaker.attributes.twitterUrl">
-                      <a :href="speaker.attributes.twitterUrl" class="social-link-secondary">
+                    <li
+                      class="about-event__social-link"
+                      v-if="speaker.attributes.twitterUrl"
+                    >
+                      <a
+                        :href="speaker.attributes.twitterUrl"
+                        class="social-link-secondary"
+                      >
                         <svg
                           xmlns="http://www.w3.org/2000/svg"
                           aria-hidden="true"
@@ -124,8 +148,14 @@
                       </a>
                     </li>
 
-                    <li class="about-event__social-link" v-if="speaker.attributes.linkedinUrl">
-                      <a :href="speaker.attributes.linkedinUrl" class="social-link-secondary">
+                    <li
+                      class="about-event__social-link"
+                      v-if="speaker.attributes.linkedinUrl"
+                    >
+                      <a
+                        :href="speaker.attributes.linkedinUrl"
+                        class="social-link-secondary"
+                      >
                         <svg
                           xmlns="http://www.w3.org/2000/svg"
                           aria-hidden="true"
@@ -160,6 +190,7 @@
           <div class="about-event__body">
             <p data-aos="fade-up" class="about-event__text">
               {{ event.attributes.description }}
+              {{ event }}
             </p>
           </div>
         </div>
@@ -177,14 +208,14 @@ import FooterComponent from "../components/FooterComponent.vue";
 import PartnerForm from "../components/PartnerForm.vue";
 import eventService from "../service/eventService.js";
 
-import sam from '../assets/scripts/sam'
-import dimas from '../assets/scripts/dimas'
+import sam from "../assets/scripts/sam";
+import dimas from "../assets/scripts/dimas";
 
 export default {
   data() {
     return {
       event: null,
-      speakers: []
+      speakers: [],
     };
   },
   metaInfo: {
@@ -196,19 +227,35 @@ export default {
     FooterComponent,
     PartnerForm,
   },
-  mounted(){
-    dimas()
-    sam()
+  mounted() {
+    console.log("mounted");
+    dimas();
+    sam();
   },
   async beforeMount() {
-    this.event = this.$route.params.event
-    this.event.attributes.speakers.data.forEach(speaker => {
-      eventService.getSpeakerDetails(speaker.id).then(resp => {
-        this.speakers.push(resp.data.data)
+    console.log("created");
+    // console.log('before mount event');
+    // console.log(this.$route.params.id);
+    const eventId = this.$route.params.id;
+    const e = await eventService.getEventByid(eventId);
+    this.event = e.data.data;
+    console.log(this.event);
+    // dimas()
+    // sam()
+    // this.event = this.$route.params.event
+    this.event.attributes.speakers.data.forEach((speaker) => {
+      eventService.getSpeakerDetails(speaker.id).then((resp) => {
+        this.speakers.push(resp.data.data);
         // console.log(resp.data)
-        
-      })
-    })
+      });
+    });
+
+if(this.event.attributes.videoUrl){
+    var videoDiv = document.getElementById("videoDiv")
+    videoDiv.setAttribute('data-video-url', this.event.attributes.videoUrl)
+}
+        // dimas();
+    // sam();
     // let event =  await eventService.getEventDetails(this.$route.params.eventId)
     // console.log(event)
   },

@@ -230,7 +230,9 @@ export default {
     go(path, event){
       this.$router.push({
         name: path, 
-        params: { 'event': event } 
+        params: {'id': event.id}
+        // name: path + '/' + event.id, 
+        // params: { 'event': event } 
         })
     }
   }
