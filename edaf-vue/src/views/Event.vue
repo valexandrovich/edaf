@@ -190,7 +190,6 @@
           <div class="about-event__body">
             <p data-aos="fade-up" class="about-event__text">
               {{ event.attributes.description }}
-              {{ event }}
             </p>
           </div>
         </div>
@@ -227,16 +226,10 @@ export default {
     FooterComponent,
     PartnerForm,
   },
-  mounted() {
+  async mounted() {
     console.log("mounted");
-    dimas();
-    sam();
-  },
-  async beforeMount() {
-    console.log("created");
-    // console.log('before mount event');
-    // console.log(this.$route.params.id);
-    const eventId = this.$route.params.id;
+      // alert('mounted')
+      const eventId = this.$route.params.id;
     const e = await eventService.getEventByid(eventId);
     this.event = e.data.data;
     console.log(this.event);
@@ -254,10 +247,37 @@ if(this.event.attributes.videoUrl){
     var videoDiv = document.getElementById("videoDiv")
     videoDiv.setAttribute('data-video-url', this.event.attributes.videoUrl)
 }
-        // dimas();
-    // sam();
-    // let event =  await eventService.getEventDetails(this.$route.params.eventId)
-    // console.log(event)
+    dimas();
+    sam();
+    
+  },
+  async beforeMount() {
+//     console.log("created");
+//     // alert('beforeMount')
+//     // console.log('before mount event');
+//     // console.log(this.$route.params.id);
+//     const eventId = this.$route.params.id;
+//     const e = await eventService.getEventByid(eventId);
+//     this.event = e.data.data;
+//     console.log(this.event);
+//     // dimas()
+//     // sam()
+//     // this.event = this.$route.params.event
+//     this.event.attributes.speakers.data.forEach((speaker) => {
+//       eventService.getSpeakerDetails(speaker.id).then((resp) => {
+//         this.speakers.push(resp.data.data);
+//         // console.log(resp.data)
+//       });
+//     });
+
+// if(this.event.attributes.videoUrl){
+//     var videoDiv = document.getElementById("videoDiv")
+//     videoDiv.setAttribute('data-video-url', this.event.attributes.videoUrl)
+// }
+//         // dimas();
+//     // sam();
+//     // let event =  await eventService.getEventDetails(this.$route.params.eventId)
+//     // console.log(event)
   },
 };
 </script>
